@@ -1,0 +1,16 @@
+#info_box {
+    background-image: url(../src/img/info_background.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 20px;
+    padding: 50px 80px 100px 110px;
+}
+
+#info_box .image img {
+    max-width: none;
+    width: 511px;
+    height: 491px;
+    object-fit: cover;
+    border-radius: 20px;
+}

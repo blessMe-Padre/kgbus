@@ -7,12 +7,12 @@ import { initScroll } from "./module/scroll.js";
 window.addEventListener('DOMContentLoaded', () => {
     console.log('подключен скрипт main.js');
 
-    initNav();
-    initSlider();
-    initCurrentYear();
-    initScrollToTop();
-    initScroll();
-    baguetteBox.run('.gallery-wrapper');
+    // initNav();
+    // initSlider();
+    // initCurrentYear();
+    // initScrollToTop();
+    // initScroll();
+    // baguetteBox.run('.gallery-wrapper');
 
     // DOMContentLoaded
 });

@@ -7,12 +7,29 @@ import { initScroll } from "./module/scroll.js";
 window.addEventListener('DOMContentLoaded', () => {
     console.log('подключен скрипт main.js');
 
-    // initNav();
+    initNav();
     // initSlider();
     // initCurrentYear();
     // initScrollToTop();
     // initScroll();
     // baguetteBox.run('.gallery-wrapper');
 
-    // DOMContentLoaded
+    // DOMContentLoaded..
+
+    const addAccordionArrowClass = () => {
+        const liElements = document.querySelectorAll('.header-nav ul li');
+
+        liElements.forEach(li => {
+            const hasUlChild = li.querySelector('ul') !== null;
+
+            if (hasUlChild) {
+                const link = li.querySelector('a');
+                if (link) {
+                    link.classList.add('accordion-arrow');
+                }
+            }
+        });
+    }
+
+    addAccordionArrowClass();
 });

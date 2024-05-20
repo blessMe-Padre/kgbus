@@ -19,9 +19,33 @@
 
 /* Зарегистрируйте пользовательское семейство шрифтов и сообщите браузеру, где его найти. */
 @font-face {
-    font-family: 'archangelsk';
-    src: url('../src/fonts/archangelsk.ttf');
-    font-weight: normal;
+    font-family: 'involve';
+    src: url('../src/fonts/Involve-Regular.ttf');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'involve';
+    src: url('../src/fonts/Involve-Bold.ttf');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'involve';
+    src: url('../src/fonts/Involve-Medium.ttf');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'involve';
+    src: url('../src/fonts/Involve-SemiBold.ttf');
+    font-weight: 600;
     font-style: normal;
     font-display: swap;
 }
@@ -32,8 +56,8 @@
     }
 
     body {
-        font-family: 'Roboto', sans-serif;
-        color: #262626;
+        font-family: 'involve', sans-serif;
+        color: #292e35;
         background: linear-gradient(166deg, #FFF 5.27%, rgba(255, 255, 255, 0.00) 78.75%);
         font-weight: 400;
     }

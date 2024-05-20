@@ -1323,8 +1323,8 @@ html {
 }
 
 body {
-  font-family: 'Roboto', sans-serif;
-  color: #262626;
+  font-family: 'involve', sans-serif;
+  color: #292e35;
   background: linear-gradient(166deg, #FFF 5.27%, rgba(255, 255, 255, 0.00) 78.75%);
   font-weight: 400;
 }
@@ -1510,6 +1510,15 @@ body {
   padding-bottom: 3rem;
 }
 
+.text-5xl{
+  font-size: 3rem;
+  line-height: 1;
+}
+
+.text-\[40px\]{
+  font-size: 40px;
+}
+
 .transition-colors{
   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -1519,11 +1528,47 @@ body {
 /* Зарегистрируйте пользовательское семейство шрифтов и сообщите браузеру, где его найти. */
 
 @font-face {
-  font-family: 'archangelsk';
+  font-family: 'involve';
 
-  src: url('../src/fonts/archangelsk.ttf');
+  src: url('../src/fonts/Involve-Regular.ttf');
 
-  font-weight: normal;
+  font-weight: 400;
+
+  font-style: normal;
+
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'involve';
+
+  src: url('../src/fonts/Involve-Bold.ttf');
+
+  font-weight: 700;
+
+  font-style: normal;
+
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'involve';
+
+  src: url('../src/fonts/Involve-Medium.ttf');
+
+  font-weight: 500;
+
+  font-style: normal;
+
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'involve';
+
+  src: url('../src/fonts/Involve-SemiBold.ttf');
+
+  font-weight: 600;
 
   font-style: normal;
 

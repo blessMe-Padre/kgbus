@@ -83,7 +83,7 @@
                     <section id="gallery_box">
                         <h2><span>Фотогаллерея</span></h2>
 
-                        <div class="gallery grid gap-5">
+                        <div class="gallery flex flex-wrap justify-between">
                             <div class="photo"><img src="src/img/photo_1.jpg" /></div>
                             <div class="photo"><img src="src/img/photo_2.jpg" /></div>
                             <div class="photo"><img src="src/img/photo_3.jpg" /></div>
@@ -91,6 +91,8 @@
                             <div class="photo"><img src="src/img/photo_5.jpg" /></div>
                             <div class="photo"><img src="src/img/photo_6.jpg" /></div>
                             <div class="photo"><img src="src/img/photo_7.jpg" /></div>
+                            <div class="photo"><img src="src/img/photo_5.jpg" /></div>
+                            <div class="photo"><img src="src/img/photo_6.jpg" /></div>
                         </div>
                     </section>
                 </div>
@@ -101,18 +103,44 @@
                     <section id="sertificates_box">
                         <h2>Наше учреждение имеет все <span>необходимые документы и лицензии</span></h2>
 
-                        <div class="sertificates">
-                            <a class="sertificate" href=""></a>
-                            <a class="sertificate" href=""></a>
-                            <a class="sertificate" href=""></a>
+                        <div class="sertificates flex">
+                            <a class="sertificate block" href="src/img/sertificate_1.png">
+                                <span class="image block">
+                                    <img src="src/img/sertificate_1.png" />
+                                </span>
+
+                                <span class="show_file">
+                                    Посмотреть файл
+                                </span>
+                            </a>
+
+                            <a class="sertificate" href="src/img/sertificate_2.png">
+                                <span class="image">
+                                    <img src="src/img/sertificate_2.png" />
+                                </span>
+
+                                <span class="show_file">
+                                    Посмотреть файл
+                                </span>
+                            </a>
+
+                            <a class="sertificate" href="src/img/sertificate_3.png">
+                                <span class="image">
+                                    <img src="src/img/sertificate_3.png" />
+                                </span>
+
+                                <span class="show_file">
+                                    Посмотреть файл
+                                </span>
+                            </a>
                         </div>
                     </section>
 
                     <section id="faq_box">
                         <h2>Ответы на <span>частые вопросы</span></h2>
 
-                        <div class="faq">
-                            <ul class="questions">
+                        <div class="faq flex gap-5">
+                            <ul class="questions flex flex-col gap-5">
                                 <li class="question">
                                     <a href="">Как подготовить квартиру к дезинсекции?</a>
                                 </li>
@@ -139,22 +167,19 @@
                     <section id="reviews_box">
                         <h2><span>Отзывы</span> наших клиентов</h2>
 
-                        <ul class="reviews">
-                            <li class="rewiew">
-                                <div class="head">
+                        <ul class="reviews flex gap-5">
+                            <li class="rewiew flex-1 flex flex-col">
+                                <div class="head flex justify-between">
                                     <div class="name">Сергей Витальевич</div>
 
-                                    <div class="grade">
-                                        <span>5</span>
-                                        <img src="" />
-                                    </div>
+                                    <div class="grade">5.0</div>
                                 </div>
                                 
                                 <div class="comment">
                                     Надежная организация. В это непростое время пандемии вируса КОВИД-19 нашей организации потребовалось проводить регулярную обработку офисов с целью профилактики и борьбы с инфекциями. После неудачного опыта сотрудничества с другой компанией, работать с КГБУЗ одно удовольствие. Лицензии и договор есть, работы производятся четко по обозначенному графику
                                 </div>
 
-                                <div class="gallery">
+                                <div class="gallery flex">
                                     <div class="photo">
                                         <img src="src/img/review_1_1.png" />
                                     </div>
@@ -165,21 +190,18 @@
                                 </div>
                             </li>
 
-                            <li class="rewiew">
-                                <div class="head">
+                            <li class="rewiew flex-1 flex flex-col">
+                                <div class="head flex justify-between">
                                     <div class="name">Сергей Витальевич</div>
 
-                                    <div class="grade">
-                                        <span>5</span>
-                                        <img src="" />
-                                    </div>
+                                    <div class="grade">5.0</div>
                                 </div>
                                 
                                 <div class="comment">
                                     Надежная организация. В это непростое время пандемии вируса КОВИД-19 нашей организации потребовалось проводить регулярную обработку офисов с целью профилактики и борьбы с инфекциями. После неудачного опыта сотрудничества с другой компанией, работать с КГБУЗ одно удовольствие. Лицензии и договор есть, работы производятся четко по обозначенному графику
                                 </div>
 
-                                <div class="gallery">
+                                <div class="gallery flex">
                                     <div class="photo">
                                         <img src="src/img/review_1_1.png" />
                                     </div>
@@ -190,21 +212,18 @@
                                 </div>
                             </li>
 
-                            <li class="rewiew">
-                                <div class="head">
+                            <li class="rewiew flex-1 flex flex-col">
+                                <div class="head flex justify-between">
                                     <div class="name">Сергей Витальевич</div>
 
-                                    <div class="grade">
-                                        <span>5</span>
-                                        <img src="" />
-                                    </div>
+                                    <div class="grade">5.0</div>
                                 </div>
                                 
                                 <div class="comment">
                                     Надежная организация. В это непростое время пандемии вируса КОВИД-19 нашей организации потребовалось проводить регулярную обработку офисов с целью профилактики и борьбы с инфекциями. После неудачного опыта сотрудничества с другой компанией, работать с КГБУЗ одно удовольствие. Лицензии и договор есть, работы производятся четко по обозначенному графику
                                 </div>
 
-                                <div class="gallery">
+                                <div class="gallery flex">
                                     <div class="photo">
                                         <img src="src/img/review_1_1.png" />
                                     </div>
@@ -226,10 +245,10 @@
                     <section id="banner_box">
                         <h2 class="visually-hidden">banner</h2>
 
-                        <a class="banner" href="">
+                        <a class="banner flex flex-col" href="">
                             <div class="title">Противодействие коррупции</div>
 
-                            <div>Буклет "Против коррупции в здравоохранении"</div>
+                            <div class="description">Буклет "Против коррупции в здравоохранении"</div>
 
                             <div class="button">Посмотреть буклет</div>
                         </a>
@@ -238,7 +257,49 @@
                     <section id="news_box">
                         <h2>Последние <span>новости учреждения</span></h2>
 
-                        <ul class="news">
+                        <ul class="news flex gap-5">
+                            <li class="news_once">
+                                <div class="image">
+                                    <img src="src/img/news_once_image.png" />
+                                </div>
+
+                                <div class="info">
+                                    <div class="title">Каких запахов боятся тараканы?</div>
+
+                                    <div class="description">Порой кажется, что избавиться от тараканов попросту невозможно...</div>
+
+                                    <div class="date">12.02.2023</div>
+                                </div>
+                            </li>
+
+                            <li class="news_once">
+                                <div class="image">
+                                    <img src="src/img/news_once_image.png" />
+                                </div>
+
+                                <div class="info">
+                                    <div class="title">Каких запахов боятся тараканы?</div>
+
+                                    <div class="description">Порой кажется, что избавиться от тараканов попросту невозможно...</div>
+
+                                    <div class="date">12.02.2023</div>
+                                </div>
+                            </li>
+
+                            <li class="news_once">
+                                <div class="image">
+                                    <img src="src/img/news_once_image.png" />
+                                </div>
+
+                                <div class="info">
+                                    <div class="title">Каких запахов боятся тараканы?</div>
+
+                                    <div class="description">Порой кажется, что избавиться от тараканов попросту невозможно...</div>
+
+                                    <div class="date">12.02.2023</div>
+                                </div>
+                            </li>
+
                             <li class="news_once">
                                 <div class="image">
                                     <img src="src/img/news_once_image.png" />

@@ -15,6 +15,10 @@
 
 @import './block/info_box.css';
 @import './block/gallery_box.css';
+@import './block/sertificates_box.css';
+@import './block/faq_box.css';
+@import './block/reviews_box.css';
+@import './block/banner_box.css';
 
 /* Импорт TailWind */
 @tailwind base;
@@ -79,12 +83,49 @@
 /* Прочие классы */
 
 section {
-    margin-bottom: 120px;
+    position: relative;
+}
+
+section + section {
+    margin-top: 120px;
+}
+
+.section {
+    --indent: 11vw;
+    background-color: #ffffff;
+}
+
+.section:not(:last-child) {
+    margin-bottom: calc(0px - var(--indent));
+}
+
+.section + .section {
+    padding-top: calc(var(--indent) + 100px);
+}
+
+.section:nth-child(odd) {
+    background-color: #ecf3f7;
+}
+
+.section::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: var(--indent);
+    background-color: #ffffff;
+    mask-image: url(../src/img/ellipse.svg);
+    mask-repeat: no-repeat;
+    mask-position: center bottom;
+}
+
+.section:nth-child(odd)::after {
+    background-color: #ecf3f7;
 }
 
 h2 {
     font-size: 40px;
     line-height: 52px;
+    margin-bottom: 50px;
 }
 
 h3 {
@@ -123,4 +164,30 @@ p {
     clip-path: inset(100%);
     clip: rect(0 0 0 0);
     overflow: hidden;
+}
+
+.show_all {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    font-family: 'involve';
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 52px;
+    display: flex;
+    align-items: center;
+    color: #b5c2d7;
+}
+
+.show_all::after {
+    content: '';
+    display: block;
+    width: 18px;
+    height: 18px;
+    background-color: #b5c2d7;
+    mask-image: url(../src/img/arrow.svg);
+    mask-repeat: no-repeat;
+    mask-position: center;
+    mask-size: contain;
+    margin-left: 12px;
 }

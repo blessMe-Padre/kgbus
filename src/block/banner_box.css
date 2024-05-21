@@ -1,0 +1,57 @@
+#banner_box .banner {
+    gap: 30px;
+    width: 100%;
+    height: 450px;
+    background-image: url(../src/img/banner_image.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border-radius: 20px;
+    padding: 60px 384px 0px;
+}
+
+#banner_box .title {
+    font-family: 'involve';
+    font-size: 60px;
+    font-weight: 700;
+    line-height: 80px;
+    color: #ffffff;
+}
+
+#banner_box .description {
+    font-family: 'involve';
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 27px;
+    color: #ffffff;
+
+}
+
+#banner_box .button {
+    display: flex;
+    justify-content: flex-start;
+    width: max-content;
+    height: auto;
+    border: none;
+    background-color: #ffffff;
+    border-radius: 100px;
+    font-family: 'involve';
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 24px;
+    color: #6cb778;
+    padding: 18px 61px 18px;
+}
+
+#banner_box .button::after {
+    content: '';
+    display: block;
+    width: 18px;
+    height: 18px;
+    background-color: #6cb778;
+    mask-image: url(../src/img/arrow.svg);
+    mask-repeat: no-repeat;
+    mask-position: center;
+    mask-size: contain;
+    margin-left: 20px;
+}

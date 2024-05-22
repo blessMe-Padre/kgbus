@@ -24,12 +24,18 @@
 
 .header-nav a {
     font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.header-nav a:hover {
+    color: var(--green);
 }
 
 .header-nav ul {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 .header-nav ul li {

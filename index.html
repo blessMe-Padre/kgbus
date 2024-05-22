@@ -6,7 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <title>КГБУЗ</title>
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/site.webmanifest">
+    <link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+
     <!-- <link rel="stylesheet" href="css/swiper-bundle.min.css"> -->
     <link rel="stylesheet" href="css/animate.css">
     <link rel="stylesheet" href="css/baguetteBox.min.css">
@@ -19,7 +27,9 @@
             <div class="container">
                 <div class="flex justify-between items-center">
                     <div class="flex py-5">
-                        <img src="./src/img/logo.svg" alt="">
+                        <a href="#">
+                            <img src="./src/img/logo.svg" alt="">
+                        </a>
                     </div>
 
                     <div class="flex gap-5">
@@ -43,17 +53,26 @@
                     </div>
                 </div>
 
-                <div class="flex items-center py-3">
+                <div class="flex items-center py-3 relative">
                     <button class="btn-close-menu hidden sm:flex mr-14">
                         <svg viewBox="0 0 64 48">
                             <path d="M19,15 L45,15 C70,15 58,-2 49.0177126,7 L19,37"></path>
                             <path d="M19,24 L45,24 C61.2371586,24 57,49 41,33 L32,24"></path>
                             <path d="M45,33 L19,33 C-8,33 6,-2 22,14 L45,37"></path>
                         </svg>
-                        <span>Услуги</span>
+                        <span class="font-semibold link">Услуги</span>
                     </button>
 
-                    <nav class="header-nav">
+                    <button class="btn-close-menu-mobile flex sm:hidden mr-14">
+                        <svg viewBox="0 0 64 48">
+                            <path d="M19,15 L45,15 C70,15 58,-2 49.0177126,7 L19,37"></path>
+                            <path d="M19,24 L45,24 C61.2371586,24 57,49 41,33 L32,24"></path>
+                            <path d="M45,33 L19,33 C-8,33 6,-2 22,14 L45,37"></path>
+                        </svg>
+                        <span class="font-semibold link">Меню</span>
+                    </button>
+
+                    <nav class="header-nav hidden sm:block">
                         <ul>
                             <li><a href="#">Продукция</a></li>
                             <li><a href="#">Об учреждении</a></li>
@@ -71,6 +90,56 @@
                             <li><a href="#">Контакты</a></li>
                         </ul>
                     </nav>
+                    
+                    <div class="services-menu hidden sm:block">
+                        <ul class="services-menu__list">
+                            <li> <a href="">Заключительная дезинфекция</a></li>
+                            <li> <a href="">Дератизация</a></li>
+                            <li> <a href="">Дезинфекция воды</a></li>
+                            <li> <a href="">Информационно-консультативные услуги</a></li>
+                            <li> <a href="">Профилактическая дезинфекция</a></li>
+                            <li> <a href="">Дезинсекция</a></li>
+                            <li> <a href="">Дезинвазия песочниц</a></li>
+                            <li> <a href="">Бактериологическая лаборатория</a></li>
+                            <li> <a href="">Камерная дезинфекция</a></li>
+                            <li> <a href="">Акарицидная обработка</a></li>
+                            <li> <a href="">Борьба с плесенью</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="services-menu services-menu--mobile">
+                        <ul class="services-menu__list mobile-menu-accordion">
+                            <li><a href="#">Услуги</a>
+                                <ul class="sub-menu">
+                                    <li> <a href="">Заключительная дезинфекция</a></li>
+                                    <li> <a href="">Дератизация</a></li>
+                                    <li> <a href="">Дезинфекция воды</a></li>
+                                    <li> <a href="">Информационно-консультативные услуги</a></li>
+                                    <li> <a href="">Профилактическая дезинфекция</a></li>
+                                    <li> <a href="">Дезинсекция</a></li>
+                                    <li> <a href="">Дезинвазия песочниц</a></li>
+                                    <li> <a href="">Бактериологическая лаборатория</a></li>
+                                    <li> <a href="">Камерная дезинфекция</a></li>
+                                    <li> <a href="">Акарицидная обработка</a></li>
+                                    <li> <a href="">Борьба с плесенью</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">Продукция</a></li>
+                            <li><a href="#">Об учреждении</a></li>
+                            <li><a href="#">Специалисты</a>
+                                <ul class="sub-menu">
+                                    <li><a href="#">Продукция</a></li>
+                                    <li><a href="#">Об учреждении</a></li>
+                                    <li><a href="#">Специалисты</a>
+                                </ul>
+                            </li>
+                            <li><a href="#">Лицензии</a></li>
+                            <li><a href="#">Частые вопросы</a></li>
+                            <li><a href="#">Отзывы</a></li>
+                            <li><a href="#">Новости</a></li>
+                            <li><a href="#">Контакты</a></li>
+                        </ul>
+                    </div>
                 </div>
 
             </div>

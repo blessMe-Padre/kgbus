@@ -20,6 +20,7 @@
 @import './block/reviews_box.css';
 @import './block/banner_box.css';
 @import './block/services-menu.css';
+@import './block/header.css';
 
 /* Импорт TailWind */
 @tailwind base;

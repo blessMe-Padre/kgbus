@@ -5,6 +5,7 @@ import { initScrollToTop } from "./module/scroll-to-top.js";
 import { initScroll } from "./module/scroll.js";
 import { initAccordions } from "./module/accordions.js";
 import { initArrowClass } from "./module/arrow-class-menu.js";
+import { initAppend } from "./module/appendElement.js";
 
 window.addEventListener('DOMContentLoaded', () => {
     console.log('подключен скрипт main.js');
@@ -12,6 +13,7 @@ window.addEventListener('DOMContentLoaded', () => {
     initNav();
     initAccordions();
     initArrowClass();
+    initAppend();
     // initSlider();
     // initCurrentYear();
     // initScrollToTop();

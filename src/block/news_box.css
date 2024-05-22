@@ -1,0 +1,45 @@
+#news_box .news_once {
+    background-color: #ffffff;
+    border: 1px solid #e3e9f3;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+#news_box .image {
+    width: 100%;
+    height: 276px;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+#news_box .image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#news_box .info {
+    padding: 30px 30px 20px;
+}
+
+#news_box .title {
+    font-family: 'involve';
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 26px;
+}
+
+#news_box .description {
+    font-family: 'involve';
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 21px;
+}
+
+#news_box .date {
+    font-family: 'involve';
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 26px;
+    color: #b5c2d7;
+}

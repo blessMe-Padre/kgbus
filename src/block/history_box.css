@@ -23,7 +23,7 @@
     transition-delay: 0s;
 }
 
-#history_box .point.active .date {
+#history_box .point.animate .date {
     background-color: #6cb778;
 }
 
@@ -61,7 +61,7 @@
     transition-duration: 1s;
 }
 
-#history_box .point.active .line > div {
+#history_box .point.animate .line > div {
     height: 100%;
 }
 
@@ -90,7 +90,7 @@
     transition-delay: 0s;
 }
 
-#history_box .point.active .mark_point {
+#history_box .point.animate .mark_point {
     background-color: #6cb778;
 }
 
@@ -120,30 +120,3 @@
 #history_box .point:not(:last-child) .text {
     margin-bottom: 30px;
 }
-
-/* Временно */
-
-/* #history_box .point.active .date {
-    background-color: #6cb778;
-}
-
-#history_box .point.active .mark {
-
-}
-
-#history_box .point.active .line {
-    
-}
-
-#history_box .point.active .mark_point {
-    background-color: #6cb778;
-}
-
-#history_box .point.active .text {
-    
-} */
-
-/* #history_box .action.point .line {
-    animation-duration: 3s;
-    animation-name: download_line;
-} */

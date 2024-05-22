@@ -1,8 +1,6 @@
-#info_box {
+#info_box .info_body {
     background-image: url(../src/img/info_background.jpg);
-    background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
     border-radius: 20px;
     padding: 50px 80px 100px 110px;
 }

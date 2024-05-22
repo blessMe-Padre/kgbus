@@ -20,8 +20,12 @@
 @import './block/faq_box.css';
 @import './block/reviews_box.css';
 @import './block/banner_box.css';
+
 @import './block/news_box.css';
 @import './block/map_box.css';
+
+@import './block/services-menu.css';
+
 
 /* Импорт TailWind */
 @tailwind base;
@@ -80,6 +84,15 @@
     }
 }
 
+/* Переменные */
+:root {
+    --black: #292e35;
+    --green: #6cb778;
+    --white: #fff;
+    --gray: #b5c2d7;
+    --light-gray: #ecf3f7;
+}
+
 /* Директивы классов */
 
 
@@ -89,7 +102,7 @@ section {
     position: relative;
 }
 
-section + section {
+section+section {
     margin-top: 120px;
 }
 
@@ -102,7 +115,7 @@ section + section {
     margin-bottom: calc(0px - var(--indent));
 }
 
-.section + .section {
+.section+.section {
     padding-top: calc(var(--indent) + 100px);
 }
 
@@ -193,4 +206,12 @@ p {
     mask-position: center;
     mask-size: contain;
     margin-left: 12px;
+}
+
+.link {
+    transition: color 0.3s ease;
+}
+
+.link:hover {
+    color: var(--green);
 }

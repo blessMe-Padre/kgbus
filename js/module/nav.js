@@ -4,13 +4,20 @@ export const initNav = () => {
     const mobileMenu = document.querySelector('.mobile-menu');
     const menuButton = document.querySelector('.btn-close-menu');
     const mobileMenuLinks = document.querySelectorAll('.mobile-menu a');
+    const servicesMenu = document.querySelector('.services-menu');
+    const menuButtonMobile = document.querySelector('.btn-close-menu-mobile');
+    const servicesMenuMobile = document.querySelector('.services-menu--mobile');
 
     menuButton.addEventListener('click', e => {
         menuButton.classList.toggle('active');
-        mobileMenu.classList.toggle('is-active');
+        servicesMenu.classList.toggle('is-active');
         body.classList.toggle('lock');
     });
-
+    menuButtonMobile.addEventListener('click', e => {
+        menuButtonMobile.classList.toggle('active');
+        servicesMenuMobile.classList.toggle('is-active');
+        body.classList.toggle('lock');
+    });
     mobileMenuLinks.forEach(link => {
         link.addEventListener('click', (evt) => {
             evt.preventDefault();

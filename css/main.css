@@ -49,6 +49,15 @@
   fill: none;
   display: block;
   /* position: absolute; */
+  transition: all 0.3s ease;
+}
+
+.btn-close-menu:hover svg {
+  stroke: var(--green);
+}
+
+.btn-close-menu.active svg {
+  stroke: var(--green);
 }
 
 .btn-close-menu svg path {
@@ -90,6 +99,87 @@
   --offset: 58px;
 }
 
+/* мобильная кнопка */
+
+.btn-close-menu-mobile {
+  --color: #262626;
+  height: 36px;
+  padding: 0;
+  margin: 0;
+  position: relative;
+  border: none;
+  background: none;
+  cursor: pointer;
+  -webkit-appearence: none;
+  -webkit-tap-highlight-color: transparent;
+  width: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.btn-close-menu-mobile svg {
+  width: 64px;
+  height: 48px;
+  top: -6px;
+  left: -14px;
+  stroke: var(--color);
+  stroke-width: 4px;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  fill: none;
+  display: block;
+  /* position: absolute; */
+  transition: all 0.3s ease;
+}
+
+.btn-close-menu-mobile:hover svg {
+  stroke: var(--green);
+}
+
+.btn-close-menu-mobile.active svg {
+  stroke: var(--green);
+}
+
+.btn-close-menu-mobile svg path {
+  transition: stroke-dasharray var(--duration, 0.85s) var(--easing, ease) var(--delay, 0s), stroke-dashoffset var(--duration, 0.85s) var(--easing, ease) var(--delay, 0s);
+  stroke-dasharray: var(--array-1, 26px) var(--array-2, 100px);
+  stroke-dashoffset: var(--offset, 126px);
+  transform: translateZ(0);
+}
+
+.btn-close-menu-mobile svg path:nth-child(2) {
+  --duration: 0.7s;
+  --easing: ease-in;
+  --offset: 100px;
+  --array-2: 74px;
+}
+
+.btn-close-menu-mobile svg path:nth-child(3) {
+  --offset: 133px;
+  --array-2: 107px;
+}
+
+.btn-close-menu-mobile.active svg path {
+  --offset: 57px;
+}
+
+.btn-close-menu-mobile.active svg path:nth-child(1),
+.btn-close-menu-mobile.active svg path:nth-child(3) {
+  --delay: 0.15s;
+  --easing: cubic-bezier(0.2, 0.4, 0.2, 1.1);
+}
+
+.btn-close-menu-mobile.active svg path:nth-child(2) {
+  --duration: 0.4s;
+  --offset: 2px;
+  --array-1: 1px;
+}
+
+.btn-close-menu-mobile.active svg path:nth-child(3) {
+  --offset: 58px;
+}
+
 .mobile-menu {
   transition: opacity 0.8s ease;
   opacity: 0;
@@ -115,12 +205,18 @@
 
 .header-nav a {
   font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.header-nav a:hover {
+  color: var(--green);
 }
 
 .header-nav ul {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 .header-nav ul li {
@@ -328,7 +424,8 @@
 }
 
 .swiper-centered.swiper-horizontal>.swiper-wrapper>.swiper-slide:first-child{
-  margin-inline-start:var(--swiper-centered-offset-before)
+  -webkit-margin-start:var(--swiper-centered-offset-before);
+          margin-inline-start:var(--swiper-centered-offset-before)
 }
 
 .swiper-centered.swiper-horizontal>.swiper-wrapper::before{
@@ -338,7 +435,8 @@
 }
 
 .swiper-centered.swiper-vertical>.swiper-wrapper>.swiper-slide:first-child{
-  margin-block-start:var(--swiper-centered-offset-before)
+  -webkit-margin-before:var(--swiper-centered-offset-before);
+          margin-block-start:var(--swiper-centered-offset-before)
 }
 
 .swiper-centered.swiper-vertical>.swiper-wrapper::before{
@@ -1426,6 +1524,7 @@ button.swiper-pagination-bullet{
   margin-left: 20px;
 }
 
+
 #news_box .news_once {
   background-color: #ffffff;
   border: 1px solid #e3e9f3;
@@ -1518,11 +1617,76 @@ button.swiper-pagination-bullet{
   height: 600px;
   margin-top: 40px;
   border-radius: 20px;
+=======
+.services-menu {
+  position: absolute;
+  top: 70px;
+  left: 15px;
+  box-shadow: 0 0 40px 0 rgba(73, 91, 121, 0.2);
+  background: #fff;
+  border-radius: 20px;
+  padding: 50px 60px;
+  width: 100%;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+}
+
+.services-menu.is-active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.services-menu__list {
+  display: grid;
+  grid-template-columns: 30% 20% 20% 30%;
+  gap: 10px;
+  color: #858994;
+}
+
+.services-menu__list li {
+  margin-bottom: 10px;
+}
+
+.services-menu__list a {
+  transition: color 0.2s ease;
+}
+
+.services-menu__list a:hover {
+  color: var(--green);
+}
+
+@media (max-width: 768px) {
+  .services-menu {
+    padding: 30px 20px;
+  }
+
+  .services-menu__list {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .mobile-menu-accordion .sub-menu {
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    will-change: max-height;
+    transition: all .3s ease;
+    box-sizing: border-box;
+    transform: none;
+    transform-origin: unset;
+    position: static;
+  }
+
+  .mobile-menu-accordion .sub-menu.is-active {
+    opacity: 1;
+    visibility: visible;
+  }
+
 }
 
 /* Импорт TailWind */
 
-/* ! tailwindcss v3.4.3 | MIT License | https://tailwindcss.com */
+/* ! tailwindcss v3.3.3 | MIT License | https://tailwindcss.com */
 
 /*
 1. Prevent padding and border from affecting element width. (https://github.com/mozdevs/cssremedy/issues/4)
@@ -1554,11 +1718,9 @@ button.swiper-pagination-bullet{
 4. Use the user's configured `sans` font-family by default.
 5. Use the user's configured `sans` font-feature-settings by default.
 6. Use the user's configured `sans` font-variation-settings by default.
-7. Disable tap highlights on iOS
 */
 
-html,
-:host {
+html {
   line-height: 1.5;
   /* 1 */
   -webkit-text-size-adjust: 100%;
@@ -1568,14 +1730,12 @@ html,
   -o-tab-size: 4;
      tab-size: 4;
   /* 3 */
-  font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   /* 4 */
   font-feature-settings: normal;
   /* 5 */
   font-variation-settings: normal;
   /* 6 */
-  -webkit-tap-highlight-color: transparent;
-  /* 7 */
 }
 
 /*
@@ -1647,10 +1807,8 @@ strong {
 }
 
 /*
-1. Use the user's configured `mono` font-family by default.
-2. Use the user's configured `mono` font-feature-settings by default.
-3. Use the user's configured `mono` font-variation-settings by default.
-4. Correct the odd `em` font sizing in all browsers.
+1. Use the user's configured `mono` font family by default.
+2. Correct the odd `em` font sizing in all browsers.
 */
 
 code,
@@ -1659,12 +1817,8 @@ samp,
 pre {
   font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   /* 1 */
-  font-feature-settings: normal;
-  /* 2 */
-  font-variation-settings: normal;
-  /* 3 */
   font-size: 1em;
-  /* 4 */
+  /* 2 */
 }
 
 /*
@@ -1733,8 +1887,6 @@ textarea {
   /* 1 */
   line-height: inherit;
   /* 1 */
-  letter-spacing: inherit;
-  /* 1 */
   color: inherit;
   /* 1 */
   margin: 0;
@@ -1758,9 +1910,9 @@ select {
 */
 
 button,
-input:where([type='button']),
-input:where([type='reset']),
-input:where([type='submit']) {
+[type='button'],
+[type='reset'],
+[type='submit'] {
   -webkit-appearance: button;
   /* 1 */
   background-color: transparent;
@@ -2027,10 +2179,6 @@ body {
   --tw-backdrop-opacity:  ;
   --tw-backdrop-saturate:  ;
   --tw-backdrop-sepia:  ;
-  --tw-contain-size:  ;
-  --tw-contain-layout:  ;
-  --tw-contain-paint:  ;
-  --tw-contain-style:  ;
 }
 
 ::backdrop{
@@ -2081,10 +2229,6 @@ body {
   --tw-backdrop-opacity:  ;
   --tw-backdrop-saturate:  ;
   --tw-backdrop-sepia:  ;
-  --tw-contain-size:  ;
-  --tw-contain-layout:  ;
-  --tw-contain-paint:  ;
-  --tw-contain-style:  ;
 }
 
 .container{
@@ -2095,9 +2239,9 @@ body {
   padding-left: 20px;
 }
 
-@media (min-width: 768px){
+@media (min-width: 769px){
   .container{
-    max-width: 768px;
+    max-width: 769px;
   }
 }
 
@@ -2121,6 +2265,10 @@ body {
 
 .container{
   max-width: 1440px;
+}
+
+.relative{
+  position: relative;
 }
 
 .z-10{
@@ -2246,6 +2394,10 @@ body {
   font-weight: 700;
 }
 
+.font-semibold{
+  font-weight: 600;
+}
+
 .transition-colors{
   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -2302,6 +2454,16 @@ body {
   font-display: swap;
 }
 
+/* Переменные */
+
+:root {
+  --black: #292e35;
+  --green: #6cb778;
+  --white: #fff;
+  --gray: #b5c2d7;
+  --light-gray: #ecf3f7;
+}
+
 /* Директивы классов */
 
 /* Прочие классы */
@@ -2310,7 +2472,7 @@ section {
   position: relative;
 }
 
-section + section {
+section+section {
   margin-top: 120px;
 }
 
@@ -2323,7 +2485,7 @@ section + section {
   margin-bottom: calc(0px - var(--indent));
 }
 
-.section + .section {
+.section+.section {
   padding-top: calc(var(--indent) + 100px);
 }
 
@@ -2424,9 +2586,25 @@ p {
   margin-left: 12px;
 }
 
-@media (min-width: 768px){
+.link {
+  transition: color 0.3s ease;
+}
+
+.link:hover {
+  color: var(--green);
+}
+
+@media (min-width: 769px){
+  .sm\:block{
+    display: block;
+  }
+
   .sm\:flex{
     display: flex;
+  }
+
+  .sm\:hidden{
+    display: none;
   }
 
   .sm\:flex-row{

@@ -3,11 +3,15 @@ import { initSlider } from "./module/sliders.js";
 import { initCurrentYear } from "./module/current-year.js";
 import { initScrollToTop } from "./module/scroll-to-top.js";
 import { initScroll } from "./module/scroll.js";
+import { initAccordions } from "./module/accordions.js";
+import { initArrowClass } from "./module/arrow-class-menu.js";
 
 window.addEventListener('DOMContentLoaded', () => {
     console.log('подключен скрипт main.js');
 
     initNav();
+    initAccordions();
+    initArrowClass();
     // initSlider();
     // initCurrentYear();
     // initScrollToTop();
@@ -16,20 +20,4 @@ window.addEventListener('DOMContentLoaded', () => {
 
     // DOMContentLoaded..
 
-    const addAccordionArrowClass = () => {
-        const liElements = document.querySelectorAll('.header-nav ul li');
-
-        liElements.forEach(li => {
-            const hasUlChild = li.querySelector('ul') !== null;
-
-            if (hasUlChild) {
-                const link = li.querySelector('a');
-                if (link) {
-                    link.classList.add('accordion-arrow');
-                }
-            }
-        });
-    }
-
-    addAccordionArrowClass();
 });

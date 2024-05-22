@@ -180,6 +180,18 @@
   --offset: 58px;
 }
 
+@media (max-width: 500px) {
+  .btn-close-menu-mobile {
+    width: 100px;
+  }
+}
+
+@media (max-width: 400px) {
+  .btn-close-menu-mobile {
+    width: 80px;
+  }
+}
+
 .mobile-menu {
   transition: opacity 0.8s ease;
   opacity: 0;
@@ -1601,6 +1613,7 @@ button.swiper-pagination-bullet{
   opacity: 0;
   visibility: hidden;
   transition: all 0.3s ease;
+  max-height: 75vh;
 }
 
 .services-menu.is-active {
@@ -1627,6 +1640,10 @@ button.swiper-pagination-bullet{
   color: var(--green);
 }
 
+.mobile-menu-accordion li {
+  position: relative;
+}
+
 @media (max-width: 768px) {
   .services-menu {
     padding: 30px 20px;
@@ -1637,21 +1654,43 @@ button.swiper-pagination-bullet{
   }
 
   .mobile-menu-accordion .sub-menu {
-    max-height: 0;
+    /* max-height: 0; */
     opacity: 0;
     overflow: hidden;
-    will-change: max-height;
+    /* will-change: max-height; */
     transition: all .3s ease;
     box-sizing: border-box;
     transform: none;
     transform-origin: unset;
-    position: static;
+    position: absolute;
+    top: 40px;
+    left: 0;
+    overflow: auto;
+    max-height: 70vh !important;
+    display: flex;
+    flex-direction: column;
   }
 
   .mobile-menu-accordion .sub-menu.is-active {
     opacity: 1;
     visibility: visible;
+    width: 100%;
   }
+
+  .accordion-arrow.is-active::before {
+    transform: rotate(180deg);
+  }
+}
+
+@media (max-width: 500px) {
+  .services-menu__list {
+    grid-template-columns: 1fr;
+  }
+
+  .header-contact {
+    font-size: 12px;
+  }
+
 }
 
 /* Импорт TailWind */
@@ -2273,6 +2312,14 @@ body {
   margin-right: 3.5rem;
 }
 
+.mr-3{
+  margin-right: 0.75rem;
+}
+
+.ml-5{
+  margin-left: 1.25rem;
+}
+
 .block{
   display: block;
 }
@@ -2325,12 +2372,16 @@ body {
   justify-content: space-between;
 }
 
+.gap-0{
+  gap: 0px;
+}
+
 .gap-12{
   gap: 3rem;
 }
 
-.gap-4{
-  gap: 1rem;
+.gap-2{
+  gap: 0.5rem;
 }
 
 .gap-5{
@@ -2383,9 +2434,14 @@ body {
   font-size: 40px;
 }
 
-.text-lg{
-  font-size: 1.125rem;
-  line-height: 1.75rem;
+.text-xs{
+  font-size: 0.75rem;
+  line-height: 1rem;
+}
+
+.text-sm{
+  font-size: 0.875rem;
+  line-height: 1.25rem;
 }
 
 .font-bold{
@@ -2608,6 +2664,14 @@ p {
 }
 
 @media (min-width: 769px){
+  .sm\:mr-14{
+    margin-right: 3.5rem;
+  }
+
+  .sm\:ml-0{
+    margin-left: 0px;
+  }
+
   .sm\:block{
     display: block;
   }
@@ -2620,7 +2684,37 @@ p {
     display: none;
   }
 
+  .sm\:w-\[140px\]{
+    width: 140px;
+  }
+
+  .sm\:w-\[160px\]{
+    width: 160px;
+  }
+
   .sm\:flex-row{
     flex-direction: row;
+  }
+
+  .sm\:gap-2{
+    gap: 0.5rem;
+  }
+
+  .sm\:gap-4{
+    gap: 1rem;
+  }
+
+  .sm\:gap-5{
+    gap: 1.25rem;
+  }
+
+  .sm\:text-lg{
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+  }
+
+  .sm\:text-base{
+    font-size: 1rem;
+    line-height: 1.5rem;
   }
 }

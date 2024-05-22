@@ -15,9 +15,9 @@ export const initAccordions = () => {
                 content.classList.toggle('is-active');
 
                 if (currentButton.classList.contains('is-active')) {
-                    content.style.maxHeight = 'max-content';
+                    // content.style.maxHeight = 'max-content';
                 } else {
-                    content.style.maxHeight = null;
+                    // content.style.maxHeight = null;
                 }
             }
         });

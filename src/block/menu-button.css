@@ -159,3 +159,15 @@
 .btn-close-menu-mobile.active svg path:nth-child(3) {
     --offset: 58px;
 }
+
+@media (max-width: 500px) {
+    .btn-close-menu-mobile {
+        width: 100px;
+    }
+}
+
+@media (max-width: 400px) {
+    .btn-close-menu-mobile {
+        width: 80px;
+    }
+}

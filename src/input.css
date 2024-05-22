@@ -14,13 +14,19 @@
 @import './block/breadcrumbs.css';
 
 @import './block/info_box.css';
+@import './block/history_box.css';
 @import './block/gallery_box.css';
 @import './block/sertificates_box.css';
 @import './block/faq_box.css';
 @import './block/reviews_box.css';
 @import './block/banner_box.css';
+
+@import './block/news_box.css';
+@import './block/map_box.css';
+
 @import './block/services-menu.css';
 @import './block/header.css';
+
 
 /* Импорт TailWind */
 @tailwind base;
@@ -118,7 +124,7 @@ section+section {
     background-color: #ecf3f7;
 }
 
-.section::after {
+.section:not(:last-child)::after {
     content: '';
     display: block;
     width: 100%;
@@ -129,7 +135,7 @@ section+section {
     mask-position: center bottom;
 }
 
-.section:nth-child(odd)::after {
+.section:not(:last-child):nth-child(odd)::after {
     background-color: #ecf3f7;
 }
 

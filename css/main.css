@@ -989,6 +989,156 @@ button.swiper-pagination-bullet{
   border-radius: 20px;
 }
 
+#history_box .point {
+  grid-template-columns: 223px 30px 1fr;
+  gap: 90px;
+}
+
+#history_box .point .date {
+  width: 100%;
+  font-family: 'involve';
+  font-size: 30px;
+  font-weight: 700;
+  text-align: center;
+  line-height: 40px;
+  color: #ffffff;
+  background-color: #b5c2d7;
+  border-radius: 40px;
+  padding: 10px 0px 10px;
+  transition-property: background-color;
+  transition-delay: 1s;
+  transition-duration: 1s;
+}
+
+#history_box .point:first-child .date {
+  transition-delay: 0s;
+}
+
+#history_box .point.active .date {
+  background-color: #6cb778;
+}
+
+#history_box .point .mark {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+#history_box .point .line {
+  content: '';
+  position: absolute;
+  top: 0%;
+  left: 50%;
+  display: block;
+  width: 6px;
+  height: 100%;
+  background-color: #ecf3f7;
+  transform: translate(-50%, 0%);
+}
+
+#history_box .point .line > div {
+  width: 100%;
+  height: 0%;
+  background-color: #6cb778;
+  transition-property: height;
+  transition-duration: 2s;
+  transition-timing-function: linear;
+}
+
+#history_box .point:first-child .line > div,
+#history_box .point:last-child .line > div {
+  transition-duration: 1s;
+}
+
+#history_box .point.active .line > div {
+  height: 100%;
+}
+
+#history_box .point:first-child .line {
+  height: 50%;
+  top: 50%;
+}
+
+#history_box .point:last-child .line {
+  height: 50%;
+}
+
+#history_box .point .mark_point {
+  position: relative;
+  z-index: 10;
+  width: 30px;
+  height: 30px;
+  background-color: #b5c2d7;
+  border-radius: 50%;
+  transition-property: background-color;
+  transition-delay: 1s;
+  transition-duration: 1s;
+}
+
+#history_box .point:first-child .mark_point {
+  transition-delay: 0s;
+}
+
+#history_box .point.active .mark_point {
+  background-color: #6cb778;
+}
+
+#history_box .point .mark_point > div {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 15px;
+  height: 15px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#history_box .point .text {
+  width: 100%;
+  font-family: 'involve';
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 26px;
+  color: #292e35;
+  padding: 30px 50px 30px;
+  border: 1px solid #e3e9f3;
+  border-radius: 20px;
+}
+
+#history_box .point:not(:last-child) .text {
+  margin-bottom: 30px;
+}
+
+/* Временно */
+
+/* #history_box .point.active .date {
+    background-color: #6cb778;
+}
+
+#history_box .point.active .mark {
+
+}
+
+#history_box .point.active .line {
+    
+}
+
+#history_box .point.active .mark_point {
+    background-color: #6cb778;
+}
+
+#history_box .point.active .text {
+    
+} */
+
+/* #history_box .action.point .line {
+    animation-duration: 3s;
+    animation-name: download_line;
+} */
+
 #gallery_box .gallery {
   --gap: 1.25rem;
   gap: var(--gap);
@@ -1274,6 +1424,100 @@ button.swiper-pagination-bullet{
   -webkit-mask-size: contain;
           mask-size: contain;
   margin-left: 20px;
+}
+
+#news_box .news_once {
+  background-color: #ffffff;
+  border: 1px solid #e3e9f3;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+#news_box .image {
+  width: 100%;
+  height: 276px;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+#news_box .image img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+#news_box .info {
+  padding: 30px 30px 20px;
+}
+
+#news_box .title {
+  font-family: 'involve';
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 26px;
+}
+
+#news_box .description {
+  font-family: 'involve';
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 21px;
+}
+
+#news_box .date {
+  font-family: 'involve';
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 26px;
+  color: #b5c2d7;
+}
+
+#map_box .point {
+  border: 1px solid #b5c2d7;
+  border-radius: 20px;
+  padding: 40px 30px 40px;
+}
+
+#map_box .phone_number {
+  font-family: 'involve';
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 32px;
+  color: #292e35;
+  margin-bottom: 20px;
+}
+
+#map_box .phone_number::after {
+  content: '';
+  display: block;
+  width: 25px;
+  height: 25px;
+  background-color: #6cb778;
+  -webkit-mask-image: url(../src/img/arrow.svg);
+          mask-image: url(../src/img/arrow.svg);
+  -webkit-mask-repeat: no-repeat;
+          mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+          mask-position: center;
+  -webkit-mask-size: contain;
+          mask-size: contain;
+  transform: rotate(-45deg);
+}
+
+#map_box .text {
+  font-family: 'involve';
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 21px;
+  color: #292e35;
+}
+
+#map_box .map {
+  width: 100%;
+  height: 600px;
+  margin-top: 40px;
+  border-radius: 20px;
 }
 
 /* Импорт TailWind */
@@ -1919,6 +2163,10 @@ body {
   flex: 1 1 0%;
 }
 
+.grid-cols-4{
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
 .grid-rows-\[auto_1fr_auto\]{
   grid-template-rows: auto 1fr auto;
 }
@@ -2083,7 +2331,7 @@ section + section {
   background-color: #ecf3f7;
 }
 
-.section::after {
+.section:not(:last-child)::after {
   content: '';
   display: block;
   width: 100%;
@@ -2097,7 +2345,7 @@ section + section {
           mask-position: center bottom;
 }
 
-.section:nth-child(odd)::after {
+.section:not(:last-child):nth-child(odd)::after {
   background-color: #ecf3f7;
 }
 

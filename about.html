@@ -6,6 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <title>КГБУЗ</title>
+    
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/site.webmanifest">
+    <link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <!-- <link rel="stylesheet" href="css/swiper-bundle.min.css"> -->
     <link rel="stylesheet" href="css/animate.css">
@@ -26,25 +35,33 @@
         <main>
             <h1 class="visually-hidden">title</h1>
 
-            <div class="section">
+            <div class="section_group">
                 <div class="container">
                     <section id="info_box">
-                        <h2 class="visually-hidden">about</h2>
+                        <div class="info_body relative bg-cover bg-center">
+                            <h2 class="visually-hidden">about</h2>
 
-                        <div class="breadcrumbs flex">
-                            <a href="/index.html"><span>Главная</span></a>
-                            <span>Об учреждении</span>
-                        </div>
-
-                        <div class="banner flex items-center gap-12">
-                            <div class="info">
-                                <h3><span>Краевое государственное бюджетное учреждение здравоохранения «Приморская дезинфекционная станция» -</span> учреждение дезинфекционного профиля, подведомственное министерству здравоохранения Приморского края</h3>
-
-                                <p>С момента основания и до сегодняшнего дня основной целью учреждения является обеспечение санитарно-эпидемиологического благополучия населения путем оказания государственных услуг в области дезинфекции, дезинсекции и дератизации, а также выполнения противоэпидемических работ и оказание платных услуг по дезинфекции, дезинсекции, дератизации физическим и юридическим лицам</p>
+                            <div class="breadcrumbs flex">
+                                <a href="/index.html"><span>Главная</span></a>
+                                <span>Об учреждении</span>
                             </div>
 
-                            <div class="image">
-                                <img src="src/img/info_image.jpg" />
+                            <div class="banner flex items-center gap-12">
+                                <div class="info">
+                                    <h3><span>Краевое государственное бюджетное учреждение здравоохранения «Приморская дезинфекционная станция» -</span> учреждение дезинфекционного профиля, подведомственное министерству здравоохранения Приморского края</h3>
+
+                                    <p>С момента основания и до сегодняшнего дня основной целью учреждения является обеспечение санитарно-эпидемиологического благополучия населения путем оказания государственных услуг в области дезинфекции, дезинсекции и дератизации, а также выполнения противоэпидемических работ и оказание платных услуг по дезинфекции, дезинсекции, дератизации физическим и юридическим лицам</p>
+                                </div>
+
+                                <div class="image">
+                                    <img src="src/img/info_image.jpg" />
+                                </div>
+                            </div>
+
+                            <div id="bugs">
+                                <div id="roach_1" class="roach"></div>
+                                <div id="roach_2" class="roach"></div>
+                                <div id="roach_3" class="roach"></div>
                             </div>
                         </div>
                     </section>
@@ -52,7 +69,7 @@
                     <section id="history_box">
                         <h2><span>История</span> КГБУЗ «Приморская дезинфекционная станция»</h2>
 
-                        <ul class="history">
+                        <ul class="history animate">
                             <li class="point grid justify-between items-center">
                                 <div class="date">1988 год</div>
                                 <div class="mark">
@@ -86,35 +103,74 @@
                                 <div class="text">Сегодня учреждение носит название краевого государственного учреждения здравоохранения «Приморская дезинфекционная станция» и является самым крупным учреждением дезинфекционного профиля, оказывающее услуги по дезинфекции, дезинсекции и дератизации на территории всего Приморского края.</div>
                             </li>
                         </ul>
-                    </section>
-                    <script>
-                        const list = document.querySelectorAll('.history li');
-                        let timer = 0;
 
-                        list.forEach(function(li, i) {
-                            if(i == 0) {
-                                setTimeout(function() {
-                                    li.classList.add('active');
-                                }, timer);
-                                timer += 1000;
-                            }
-                            else if(i == list.length - 1) {
-                                setTimeout(function() {
-                                    li.classList.add('active');
-                                }, timer);
-                            }
-                            else {
-                                setTimeout(function() {
-                                    li.classList.add('active');
-                                }, timer);
-                                timer += 2000;
-                            }
-                        });
-                    </script>
+                        <ul class="history animate">
+                            <li class="point grid justify-between items-center">
+                                <div class="date">1988 год</div>
+                                <div class="mark">
+                                    <div class="line"><div></div></div>
+                                    <div class="mark_point"><div></div></div>
+                                </div>
+                                <div class="text">С момента основания и до сегодняшнего дня основной целью учреждения является обеспечение санитарно-эпидемиологического благополучия населения путем оказания государственных услуг в области дезинфекции, дезинсекции и дератизации, а также выполнения противоэпидемических работ и оказание платных услуг по дезинфекции, дезинсекции, дератизации физическим и юридическим лицам</div>
+                            </li>
+                            <li class="point grid justify-between items-center">
+                                <div class="date">1996 год</div>
+                                <div class="mark">
+                                    <div class="line"><div></div></div>
+                                    <div class="mark_point"><div></div></div>
+                                </div>
+                                <div class="text">В 1996 г в Управлении Министерства юстиции Российской Федерации по Приморскому краю было зарегистрировано Государственное учреждение "Дезинфекционная станция, г. Уссурийск".
+                                    В 1996 г в Управлении Министерства юстиции Российской Федерации по Приморскому краю было зарегистрировано Государственное учреждение "Дезинфекционная станция, г. Уссурийск".
+                                    В 1996 г в Управлении Министерства юстиции Российской Федерации по Приморскому краю было зарегистрировано Государственное учреждение "Дезинфекционная станция, г. Уссурийск".
+                                    В 1996 г в Управлении Министерства юстиции Российской Федерации по Приморскому краю было зарегистрировано Государственное учреждение "Дезинфекционная станция, г. Уссурийск".
+                                </div>
+                            </li>
+                            <li class="point grid justify-between items-center">
+                                <div class="date">2005 год</div>
+                                <div class="mark">
+                                    <div class="line"><div></div></div>
+                                    <div class="mark_point"><div></div></div>
+                                </div>
+                                <div class="text">В 2005 г на основании распоряжения Правительства Российской Федерации от 17.01.2005 г. № 32-р учреждение передано в подведомственность Федеральной службе по надзору в сфере защиты прав потребителей и благополучия человека, а в 2012 году, на основании распоряжения Правительства Российской Федерации от 5 мая 2012 года № 751- р, перешло в подчинение департамента здравоохранения Приморского края и переименовано в краевое государственное бюджетное учреждение здравоохранения "Дезинфекционная станция, г.Уссурийск, Приморский край". </div>
+                            </li>
+                            <li class="point grid justify-between items-center">
+                                <div class="date">Сегодня</div>
+                                <div class="mark">
+                                    <div class="line"><div></div></div>
+                                    <div class="mark_point"><div></div></div>
+                                </div>
+                                <div class="text">Сегодня учреждение носит название краевого государственного учреждения здравоохранения «Приморская дезинфекционная станция» и является самым крупным учреждением дезинфекционного профиля, оказывающее услуги по дезинфекции, дезинсекции и дератизации на территории всего Приморского края.</div>
+                            </li>
+                            <li class="point grid justify-between items-center">
+                                <div class="date">Сегодня</div>
+                                <div class="mark">
+                                    <div class="line"><div></div></div>
+                                    <div class="mark_point"><div></div></div>
+                                </div>
+                                <div class="text">Сегодня учреждение носит название краевого государственного учреждения здравоохранения «Приморская дезинфекционная станция» и является самым крупным учреждением дезинфекционного профиля, оказывающее услуги по дезинфекции, дезинсекции и дератизации на территории всего Приморского края.</div>
+                            </li>
+                            <li class="point grid justify-between items-center">
+                                <div class="date">Сегодня</div>
+                                <div class="mark">
+                                    <div class="line"><div></div></div>
+                                    <div class="mark_point"><div></div></div>
+                                </div>
+                                <div class="text">Сегодня учреждение носит название краевого государственного учреждения здравоохранения «Приморская дезинфекционная станция» и является самым крупным учреждением дезинфекционного профиля, оказывающее услуги по дезинфекции, дезинсекции и дератизации на территории всего Приморского края.</div>
+                            </li>
+                            <li class="point grid justify-between items-center">
+                                <div class="date">Сегодня</div>
+                                <div class="mark">
+                                    <div class="line"><div></div></div>
+                                    <div class="mark_point"><div></div></div>
+                                </div>
+                                <div class="text">Сегодня учреждение носит название краевого государственного учреждения здравоохранения «Приморская дезинфекционная станция» и является самым крупным учреждением дезинфекционного профиля, оказывающее услуги по дезинфекции, дезинсекции и дератизации на территории всего Приморского края.</div>
+                            </li>
+                        </ul>
+                    </section>
                 </div>
             </div>
             
-            <div class="section">
+            <div class="section_group">
                 <div class="container">
                     <section id="gallery_box">
                         <h2><span>Фотогаллерея</span></h2>
@@ -132,7 +188,7 @@
                 </div>
             </div>
             
-            <div class="section">
+            <div class="section_group">
                 <div class="container">
                     <section id="sertificates_box">
                         <h2>Наше учреждение имеет все <span>необходимые документы и лицензии</span></h2>
@@ -274,7 +330,7 @@
                 </div>
             </div>
             
-            <div class="section">
+            <div class="section_group">
                 <div class="container">
                     <section id="banner_box">
                         <h2 class="visually-hidden">banner</h2>
@@ -354,7 +410,7 @@
                 </div>
             </div>
             
-            <div class="section">
+            <div class="section_group">
                 <div class="container">
                     <section id="map_box">
                         <h2><span>Мы в Уссурийске</span></h2>

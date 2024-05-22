@@ -13,6 +13,7 @@
 @import './block/video.css';
 @import './block/breadcrumbs.css';
 
+/* Импорт стилей для страницы "Об учреждении" */
 @import './block/info_box.css';
 @import './block/history_box.css';
 @import './block/gallery_box.css';
@@ -20,7 +21,6 @@
 @import './block/faq_box.css';
 @import './block/reviews_box.css';
 @import './block/banner_box.css';
-
 @import './block/news_box.css';
 @import './block/map_box.css';
 
@@ -92,6 +92,23 @@
     --white: #fff;
     --gray: #b5c2d7;
     --light-gray: #ecf3f7;
+
+    /* Переменные Медведа */
+    --font-family                       : 'involve', sans-serif;
+    --font-size                         : 16px;
+    --button-bg-color                   : #6cb778;
+    --button-bg-color-hover             : #3c7a59;
+    --button-bg-color-disabled          : #b5c2d7;
+    --button-second-bg-color            : #ffffff;
+    --button-second-bg-color-hover      : #6cb778;
+    --button-second-bg-color-disabled   : #3c7a59;
+    --button-text-color                 : #ffffff;
+    --button-second-text-color          : #6cb778;
+    --button-second-text-color-hover    : #ffffff;
+    --link-text-color                   : #b5c2d7;
+    --link-text-color-hover             : #6cb778;
+    --link-text-color-disabled          : #3c7a59;
+    
 }
 
 /* Директивы классов */
@@ -103,28 +120,28 @@ section {
     position: relative;
 }
 
-section+section {
+section + section {
     margin-top: 120px;
 }
 
-.section {
+.section_group {
     --indent: 11vw;
     background-color: #ffffff;
 }
 
-.section:not(:last-child) {
+.section_group:not(:last-child) {
     margin-bottom: calc(0px - var(--indent));
 }
 
-.section+.section {
+.section_group + .section_group {
     padding-top: calc(var(--indent) + 100px);
 }
 
-.section:nth-child(odd) {
+.section_group:nth-child(odd) {
     background-color: #ecf3f7;
 }
 
-.section:not(:last-child)::after {
+.section_group:not(:last-child)::after {
     content: '';
     display: block;
     width: 100%;
@@ -135,7 +152,7 @@ section+section {
     mask-position: center bottom;
 }
 
-.section:not(:last-child):nth-child(odd)::after {
+.section_group:not(:last-child):nth-child(odd)::after {
     background-color: #ecf3f7;
 }
 

@@ -11,7 +11,7 @@ import { initAppend } from "./module/appendElement.js";
 window.addEventListener('DOMContentLoaded', () => {
     console.log('подключен скрипт main.js');
 
-    //initNav();
+    initNav();
     initAccordions();
     initArrowClass();
     initAppend();

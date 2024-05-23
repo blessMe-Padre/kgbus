@@ -1,0 +1,46 @@
+#creatures {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+}
+
+.creature {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-color: var(--black);
+    mask-repeat: no-repeat;
+    mask-position: center;
+    mask-size: contain;
+}
+
+.creature.ant {
+    mask-image: url(../src/img/creatures/ant.svg);
+}
+
+.creature.fly {
+    mask-image: url(../src/img/creatures/fly.svg);
+}
+
+.creature.mite {
+    mask-image: url(../src/img/creatures/mite.svg);
+}
+
+.creature.mouse {
+    mask-image: url(../src/img/creatures/mouse.svg);
+}
+
+.creature.roach {
+    mask-image: url(../src/img/creatures/roach.svg);
+}
+
+.creature.scolopendra {
+    mask-image: url(../src/img/creatures/scolopendra.svg);
+}
+
+.creature.virus {
+    mask-image: url(../src/img/creatures/virus.svg);
+}

@@ -1,4 +1,5 @@
 export const initAccordions = () => {
+    // Это для меню
     const MobileAccordion = document.querySelectorAll('.mobile-menu-accordion li');
 
     MobileAccordion.forEach((el) => {
@@ -20,6 +21,24 @@ export const initAccordions = () => {
                     // content.style.maxHeight = null;
                 }
             }
+        });
+    });
+
+    // Это не для меню
+    const openContainer = document.querySelectorAll('.open_container');
+
+    openContainer.forEach(function(container) {
+        const list = container.querySelectorAll('li');
+
+        list.forEach(function(li){
+            const button = li.querySelector('.title');
+            const content = li.querySelector('.content');
+
+            button.addEventListener('click', function(object) {
+                if(content) {
+                    content.classList.toggle('is-active');
+                }
+            });
         });
     });
 }

@@ -27,6 +27,9 @@
 @import './block/services-menu.css';
 @import './block/header.css';
 
+@import './block/hero.css';
+@import './block/popup.css';
+
 
 /* Импорт TailWind */
 @tailwind base;
@@ -89,26 +92,27 @@
 :root {
     --black: #292e35;
     --green: #6cb778;
+    --dark-green: #3c7a59;
     --white: #fff;
     --gray: #b5c2d7;
     --light-gray: #ecf3f7;
 
     /* Переменные Медведа */
-    --font-family                       : 'involve', sans-serif;
-    --font-size                         : 16px;
-    --button-bg-color                   : #6cb778;
-    --button-bg-color-hover             : #3c7a59;
-    --button-bg-color-disabled          : #b5c2d7;
-    --button-second-bg-color            : #ffffff;
-    --button-second-bg-color-hover      : #6cb778;
-    --button-second-bg-color-disabled   : #3c7a59;
-    --button-text-color                 : #ffffff;
-    --button-second-text-color          : #6cb778;
-    --button-second-text-color-hover    : #ffffff;
-    --link-text-color                   : #b5c2d7;
-    --link-text-color-hover             : #6cb778;
-    --link-text-color-disabled          : #3c7a59;
-    
+    --font-family: 'involve', sans-serif;
+    --font-size: 16px;
+    --button-bg-color: #6cb778;
+    --button-bg-color-hover: #3c7a59;
+    --button-bg-color-disabled: #b5c2d7;
+    --button-second-bg-color: #ffffff;
+    --button-second-bg-color-hover: #6cb778;
+    --button-second-bg-color-disabled: #3c7a59;
+    --button-text-color: #ffffff;
+    --button-second-text-color: #6cb778;
+    --button-second-text-color-hover: #ffffff;
+    --link-text-color: #b5c2d7;
+    --link-text-color-hover: #6cb778;
+    --link-text-color-disabled: #3c7a59;
+
 }
 
 /* Директивы классов */
@@ -120,7 +124,7 @@ section {
     position: relative;
 }
 
-section + section {
+section+section {
     margin-top: 120px;
 }
 
@@ -133,7 +137,7 @@ section + section {
     margin-bottom: calc(0px - var(--indent));
 }
 
-.section_group + .section_group {
+.section_group+.section_group {
     padding-top: calc(var(--indent) + 100px);
 }
 

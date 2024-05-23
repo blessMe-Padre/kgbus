@@ -7,6 +7,8 @@ import { initAccordions } from "./module/accordions.js";
 import { initArrowClass } from "./module/arrow-class-menu.js";
 import { initAnimateClass } from "./module/add_class_for_animation.js";
 import { initAppend } from "./module/appendElement.js";
+import { initPopup } from "./module/popup.js";
+import { initScrollAnimation } from "./module/scroll-animation.js";
 
 window.addEventListener('DOMContentLoaded', () => {
     console.log('подключен скрипт main.js');
@@ -15,6 +17,8 @@ window.addEventListener('DOMContentLoaded', () => {
     initAccordions();
     initArrowClass();
     initAppend();
+    initPopup();
+    initScrollAnimation();
     // initSlider();
     // initCurrentYear();
     // initScrollToTop();

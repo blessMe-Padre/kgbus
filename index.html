@@ -22,7 +22,7 @@
 </head>
 
 <body>
-    <div class="h-screen grid grid-rows-[auto_1fr_auto]">
+    <div class="h-screen grid grid-rows-[auto_1fr_auto] wrapper">
         <header class="z-10 w-full md-28 transition-colors header">
             <div class="container">
                 <div class="flex justify-between items-center">
@@ -152,10 +152,58 @@
         </header>
 
         <main>
-            <h1 class="visually-hidden">title</h1>
+            <h1 class="visually-hidden">КГБУЗ «Приморская дезинфекционная станция» — №1 по дезинфекции, дезинсекции и дератизации 
+                на территории Приморского края</h1>
             <div class="container">
-               <h2 class="text-[40px]">Выберите <strong>необходимые услуги</strong></h2>
+                <section class="hero" data-scroll>
+                    <h2 class="hero__title"><span class="font-bold">КГБУЗ «Приморская дезинфекционная станция» — </span><span class="hero__span-green">№1</span> по дезинфекции, дезинсекции и дератизации 
+                        на территории Приморского края</h2>
+                    <p class="hero__text">Основной целью учреждения является обеспечение санитарно-эпидемиологического благополучия населения </p>
+                    <a href="#popup" class="button popup-link">
+                        <span>Заказать услуги</span>
+                        <img src="./src/img/icons/arrow-right.svg" width="18" height="10" alt="кнопка заказать услугу">
+                    </a>
+                </section>
             </div>
+
+            <section id="popup" class="popup">
+                <div class="popup__body">
+                    <div class="popup__content">
+                        <button class="popup__btn close-popup" aria-label="Закрыть" tabindex="4">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="23" height="18" viewBox="0 0 23 18" fill="none">
+                                <path d="M4 1.45508L19.9099 17.365" stroke="#ffffff" />
+                                <path d="M4.54492 16.9099L20.4548 1.00001" stroke="#ffffff" />
+                            </svg>
+                        </button>
+                        <h2 class="text-start text-main-black z-10 font-normal md:text-4xl text-xl uppercase pb-10 ">
+                            Закажите звонок</h2>
+                        <div>
+                            <p class="font-semibold text-lg max-w-xs">Оставьте контакты и менеджер свяжется с вами в
+                                ближайшее время</p>
+                        </div>
+                        <div class="form-wrapper">
+                            <form action="#" id="form" class="form validate-form flex-col">
+                                <div class="form__item">
+                                    <label for="formName">Введите имя</label>
+                                    <input id="formName" type="text" name="name">
+                                </div>
+        
+                                <div class="form__item">
+                                    <label for="formName">Введите номер</label>
+                                    <input id="formPhone" type="tel" name="phone">
+                                </div>
+        
+        
+                                <button type="submit">Заказать звонок</button>
+                            </form>
+                        </div>
+                        <p class="form-section__descriptions w-full">Нажимая кнопку “отправить заявку” вы даёте
+                            согласие на <a class="underline" href="#" target="_blank" rel="noopener noreferrer">обработку
+                                персональных
+                                данных</a></p>
+                    </div>
+                </div>
+            </section>
         </main>
 
         <footer class="py-12 wow fadeInUp">

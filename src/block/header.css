@@ -6,7 +6,13 @@
 }
 
 @media (max-width: 500px) {
-    .header-contact {
+
+    .header-contact-1,
+    .header-contact-2 {
         font-size: 12px;
+    }
+
+    .header-group {
+        gap: 5px;
     }
 }

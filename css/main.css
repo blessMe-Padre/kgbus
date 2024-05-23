@@ -5,19 +5,19 @@
 /* Импорт кастомных стилей для компонентов */
 
 .button {
-  width: 50px;
-  height: 50px;
-  border-radius: 100%;
-  display: flex;
+  display: inline-flex;
   align-items: center;
-  justify-content: center;
-  fill: rgba(255, 255, 255, 0.60);
-  border: 1px solid #f2f2f2;
+  gap: 15px;
+  border-radius: 30px;
+  padding: 9px 25px;
+  font-weight: 600;
+  color: var(--white);
+  background-color: var(--green);
+  transition: color 0.3s ease, background-color 0.3s ease;
 }
 
-.button.is-active {
-  background-color: #5278DA;
-  color: #ffffff;
+.button:hover {
+  background-color: var(--dark-green);
 }
 
 .btn-close-menu {
@@ -1698,9 +1698,172 @@ button.swiper-pagination-bullet{
 }
 
 @media (max-width: 500px) {
-  .header-contact {
+  .header-contact-1,
+    .header-contact-2 {
     font-size: 12px;
   }
+
+  .header-group {
+    gap: 5px;
+  }
+}
+
+.hero {
+  padding: 100px 0 100px 50px;
+  min-height: 700px;
+  background-image: url('../src/img/bg/hero-banner.webp');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: right center;
+  background-color: var(--light-gray);
+  border-radius: 30px;
+}
+
+@media (max-width: 769px) {
+  .hero {
+    padding: 60px 15px 60px 15px;
+    background-image: url('../src/img/bg/hero-banner-medium.webp');
+    min-height: 600px;
+  }
+}
+
+@media (max-width: 500px) {
+  .hero {
+    padding: 60px 15px 60px 15px;
+    background-image: url('../src/img/bg/hero-banner-smal.webp');
+    min-height: 600px;
+  }
+}
+
+.hero__title {
+  font-size: clamp(1.25rem, 0.833rem + 1.852vw, 2.5rem);
+  line-height: 1.3;
+  color: #292e35;
+  max-width: 760px;
+  margin-bottom: 30px;
+}
+
+.hero__span-green {
+  color: var(--white);
+  background-color: var(--green);
+  padding: 0 10px;
+  border-radius: 10px;
+}
+
+.hero__text {
+  font-weight: 500;
+  font-size: 18px;
+  color: #292e35;
+  max-width: 760px;
+  margin-bottom: 30px;
+}
+
+.popup {
+  opacity: 0;
+  visibility: hidden;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(3, 16, 27, .7);
+  top: 0;
+  left: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+  transition: opacity 0.3s ease;
+  z-index: -2;
+}
+
+.popup.open {
+  opacity: 1;
+  visibility: visible;
+  z-index: 70;
+}
+
+.popup__body {
+  width: 100%;
+  min-height: 100%;
+  padding: 30px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.popup__content {
+  position: relative;
+  box-sizing: border-box;
+  max-width: 630px;
+  min-height: 430px;
+  padding: 40px;
+  background: #ffffff;
+  border-radius: 20px;
+}
+
+.popup__text {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 23px;
+}
+
+.popup__btn {
+  margin-top: -10px;
+  position: absolute;
+  width: 35px;
+  height: 35px;
+  top: -30px;
+  right: 0;
+  cursor: pointer;
+  border: none;
+  border-radius: 100%;
+  transition: background-color 0.3s ease;
+  background-color: #201a1a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 767px) {
+  .popup__title {
+    font-size: 24px;
+    line-height: 1.2;
+    margin-bottom: 20px;
+  }
+}
+
+.form-wrapper button {
+  font-family: "Futura PT", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  color: #fff;
+  border-radius: 25px;
+  padding: 10px 30px;
+  background: #1a9640;
+  margin: 40px 0;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.form__item {
+  margin-top: 20px;
+}
+
+.form__item label {
+  font-family: "Futura PT", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.3;
+  color: #292e35;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.form__item input {
+  border-radius: 100px;
+  padding: 0px 24px;
+  height: 45px;
+  background: #f5f6f8;
+  display: flex;
+  width: 100%;
 }
 
 /* Импорт TailWind */
@@ -2334,6 +2497,10 @@ body {
   width: 100%;
 }
 
+.max-w-xs{
+  max-width: 20rem;
+}
+
 .flex-1{
   flex: 1 1 0%;
 }
@@ -2420,13 +2587,27 @@ body {
   padding-bottom: 1.25rem;
 }
 
-.text-\[40px\]{
-  font-size: 40px;
+.pb-10{
+  padding-bottom: 2.5rem;
+}
+
+.text-start{
+  text-align: start;
+}
+
+.text-lg{
+  font-size: 1.125rem;
+  line-height: 1.75rem;
 }
 
 .text-sm{
   font-size: 0.875rem;
   line-height: 1.25rem;
+}
+
+.text-xl{
+  font-size: 1.25rem;
+  line-height: 1.75rem;
 }
 
 .text-xs{
@@ -2438,8 +2619,20 @@ body {
   font-weight: 700;
 }
 
+.font-normal{
+  font-weight: 400;
+}
+
 .font-semibold{
   font-weight: 600;
+}
+
+.uppercase{
+  text-transform: uppercase;
+}
+
+.underline{
+  text-decoration-line: underline;
 }
 
 .transition-colors{
@@ -2503,24 +2696,25 @@ body {
 :root {
   --black: #292e35;
   --green: #6cb778;
+  --dark-green: #3c7a59;
   --white: #fff;
   --gray: #b5c2d7;
   --light-gray: #ecf3f7;
   /* Переменные Медведа */
-  --font-family                       : 'involve', sans-serif;
-  --font-size                         : 16px;
-  --button-bg-color                   : #6cb778;
-  --button-bg-color-hover             : #3c7a59;
-  --button-bg-color-disabled          : #b5c2d7;
-  --button-second-bg-color            : #ffffff;
-  --button-second-bg-color-hover      : #6cb778;
-  --button-second-bg-color-disabled   : #3c7a59;
-  --button-text-color                 : #ffffff;
-  --button-second-text-color          : #6cb778;
-  --button-second-text-color-hover    : #ffffff;
-  --link-text-color                   : #b5c2d7;
-  --link-text-color-hover             : #6cb778;
-  --link-text-color-disabled          : #3c7a59;
+  --font-family: 'involve', sans-serif;
+  --font-size: 16px;
+  --button-bg-color: #6cb778;
+  --button-bg-color-hover: #3c7a59;
+  --button-bg-color-disabled: #b5c2d7;
+  --button-second-bg-color: #ffffff;
+  --button-second-bg-color-hover: #6cb778;
+  --button-second-bg-color-disabled: #3c7a59;
+  --button-text-color: #ffffff;
+  --button-second-text-color: #6cb778;
+  --button-second-text-color-hover: #ffffff;
+  --link-text-color: #b5c2d7;
+  --link-text-color-hover: #6cb778;
+  --link-text-color-disabled: #3c7a59;
 }
 
 /* Директивы классов */
@@ -2531,7 +2725,7 @@ section {
   position: relative;
 }
 
-section + section {
+section+section {
   margin-top: 120px;
 }
 
@@ -2544,7 +2738,7 @@ section + section {
   margin-bottom: calc(0px - var(--indent));
 }
 
-.section_group + .section_group {
+.section_group+.section_group {
   padding-top: calc(var(--indent) + 100px);
 }
 
@@ -2698,5 +2892,12 @@ p {
   .sm\:text-lg{
     font-size: 1.125rem;
     line-height: 1.75rem;
+  }
+}
+
+@media (min-width: 1024px){
+  .md\:text-4xl{
+    font-size: 2.25rem;
+    line-height: 2.5rem;
   }
 }

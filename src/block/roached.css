@@ -21,7 +21,7 @@
 }
 
 .animate-cockroach {
-    animation: sPath 5s;
+    animation: sPath 5s forwards;
     animation-delay: 2s;
 }
 

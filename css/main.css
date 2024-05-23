@@ -1891,7 +1891,7 @@ button.swiper-pagination-bullet{
 }
 
 .animate-cockroach {
-  animation: sPath 5s;
+  animation: sPath 5s forwards;
   animation-delay: 2s;
 }
 
@@ -1994,6 +1994,7 @@ button.swiper-pagination-bullet{
 
 .services__item-svg rect {
   fill: var(--gray);
+  transition: fill 0.3s ease;
 }
 
 .services__item:hover .services__item-svg rect {
@@ -2006,6 +2007,18 @@ button.swiper-pagination-bullet{
   background-color: var(--dark-green);
   color: var(--white);
   background-image: url('../src/img/services-icon/line.svg');
+}
+
+@media (max-width: 1164px) {
+  .services__item {
+    max-width: 31.5%;
+  }
+}
+
+@media (max-width: 1130px) {
+  .services__item {
+    max-width: 31.5%;
+  }
 }
 
 /* Импорт TailWind */

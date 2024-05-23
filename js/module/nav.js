@@ -11,19 +11,19 @@ export const initNav = () => {
     menuButton.addEventListener('click', e => {
         menuButton.classList.toggle('active');
         servicesMenu.classList.toggle('is-active');
-        body.classList.toggle('lock');
+        // body.classList.toggle('lock');
     });
     menuButtonMobile.addEventListener('click', e => {
         menuButtonMobile.classList.toggle('active');
         servicesMenuMobile.classList.toggle('is-active');
-        body.classList.toggle('lock');
+        // body.classList.toggle('lock');
     });
     mobileMenuLinks.forEach(link => {
         link.addEventListener('click', (evt) => {
             evt.preventDefault();
             menuButton.classList.remove('active');
             mobileMenu.classList.remove('is-active');
-            body.classList.remove('lock');
+            // body.classList.remove('lock');
         });
     });
 }

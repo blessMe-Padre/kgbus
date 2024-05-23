@@ -13,6 +13,7 @@ import { initBaguettes } from "./module/baguette_boxes.js";
 import { initPopup } from "./module/popup.js";
 import { initScrollAnimation } from "./module/scroll-animation.js";
 import { runRoachedRun } from "./module/run-roached.js";
+import { initMask } from "./module/phone-mask.js";
 
 
 window.addEventListener('DOMContentLoaded', () => {
@@ -25,6 +26,7 @@ window.addEventListener('DOMContentLoaded', () => {
     initPopup();
     initScrollAnimation();
     runRoachedRun();
+    initMask();
     // initSlider();
     // initCurrentYear();
     // initScrollToTop();

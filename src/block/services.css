@@ -41,7 +41,6 @@
 
 .mask {
     display: block;
-    mask-image: url('../src/img/services-icon/icon-3.png');
     mask-position: center;
     mask-size: contain;
     background-color: #fff;
@@ -75,9 +74,17 @@
 .services__item:last-child {
     flex-grow: 1;
     max-width: 100%;
-    background-color: var(--dark-green);
+    background-color: var(--green);
     color: var(--white);
     background-image: url('../src/img/services-icon/line.svg');
+}
+
+.services__item:last-child:hover {
+    background-color: var(--dark-green);
+}
+
+.services__item:last-child:hover .services__item-svg rect {
+    fill: var(--green);
 }
 
 @media (max-width: 1164px) {
@@ -88,6 +95,27 @@
 
 @media (max-width: 1130px) {
     .services__item {
-        max-width: 31.5%;
+        max-width: 31.4%;
+    }
+}
+
+@media (max-width: 1074px) {
+    .services__list {
+        gap: 20px;
+    }
+
+    .services__item {
+        max-width: 100%;
+        width: 48%;
+    }
+}
+
+@media (max-width: 539px) {
+    .services {
+        padding: 40px 0;
+    }
+
+    .services__item {
+        width: 100%;
     }
 }

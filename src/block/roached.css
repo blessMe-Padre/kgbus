@@ -1,0 +1,51 @@
+.roached,
+.roached-animation {
+    transition: all 0.5s ease;
+    position: absolute;
+}
+
+.roached-1 {
+    top: 300px;
+    left: 30px;
+}
+
+@media (max-width: 400px) {
+    .roached-1 {
+        display: none;
+    }
+}
+
+.roached-2 {
+    top: 40px;
+    right: 80px;
+}
+
+.animate-cockroach {
+    animation: sPath 5s forwards;
+    animation-delay: 2s;
+}
+
+/* forwards */
+
+@keyframes sPath {
+    0% {
+        transform: translate(0, 0) rotate(80deg);
+    }
+
+    15% {
+        transform: translate(0, 0) rotate(120deg);
+    }
+
+    20% {
+        transform: rotate(60deg) rotate(120deg);
+    }
+
+    25% {
+        transform: translate(0px, 100px)rotate(120deg)
+    }
+
+    100% {
+        transform: translate(0px, 800px) rotate(120deg);
+    }
+
+}

@@ -28,6 +28,12 @@
 @import './block/services-menu.css';
 @import './block/header.css';
 
+@import './block/hero.css';
+@import './block/popup.css';
+@import './block/roached.css';
+@import './block/title.css';
+@import './block/services.css';
+
 
 /* Импорт TailWind */
 @tailwind base;
@@ -133,7 +139,7 @@ section {
     position: relative;
 }
 
-section + section {
+section+section {
     margin-top: 120px;
 }
 
@@ -146,7 +152,7 @@ section + section {
     margin-bottom: calc(0px - var(--indent));
 }
 
-.section_group + .section_group {
+.section_group+.section_group {
     padding-top: calc(var(--indent) + 100px);
 }
 

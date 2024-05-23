@@ -9,6 +9,12 @@
     left: 30px;
 }
 
+@media (max-width: 400px) {
+    .roached-1 {
+        display: none;
+    }
+}
+
 .roached-2 {
     top: 40px;
     right: 80px;

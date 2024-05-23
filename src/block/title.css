@@ -1,0 +1,4 @@
+.title {
+    font-size: clamp(1.5rem, 1.167rem + 1.481vw, 2.5rem);
+    margin-bottom: 30px;
+}

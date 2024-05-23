@@ -1879,6 +1879,12 @@ button.swiper-pagination-bullet{
   left: 30px;
 }
 
+@media (max-width: 400px) {
+  .roached-1 {
+    display: none;
+  }
+}
+
 .roached-2 {
   top: 40px;
   right: 80px;
@@ -1911,6 +1917,95 @@ button.swiper-pagination-bullet{
   100% {
     transform: translate(0px, 800px) rotate(120deg);
   }
+}
+
+.title {
+  font-size: clamp(1.5rem, 1.167rem + 1.481vw, 2.5rem);
+  margin-bottom: 30px;
+}
+
+.services {
+  padding: 100px 0;
+}
+
+.services__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.services__item {
+  flex-grow: 0;
+  max-width: 23%;
+  border-radius: 20px;
+  background-color: var(--light-gray);
+  padding: 30px;
+  transition: background-color 0.3s ease;
+}
+
+.services__item:hover {
+  background-color: var(--green);
+}
+
+.services__item h3 {
+  transition: color 0.3s ease;
+  font-size: clamp(1rem, 0.912rem + 0.376vw, 1.25rem);
+  line-height: 1.3;
+}
+
+.services__item:hover h3 {
+  color: var(--white);
+}
+
+.mask-wrapper {
+  width: 50px;
+  height: 50px;
+  background-color: var(--green);
+  border-radius: 6px;
+  transition: background-color 0.3s ease;
+}
+
+.mask {
+  display: block;
+  -webkit-mask-image: url('../src/img/services-icon/icon-3.png');
+          mask-image: url('../src/img/services-icon/icon-3.png');
+  -webkit-mask-position: center;
+          mask-position: center;
+  -webkit-mask-size: contain;
+          mask-size: contain;
+  background-color: #fff;
+  width: 100%;
+  height: 100%;
+}
+
+.services__item:hover .mask-wrapper {
+  background-color: var(--white);
+}
+
+.services__item:hover .mask {
+  background-color: var(--green);
+}
+
+.services__item-svg {
+  width: 40px;
+  height: 40px;
+  flex: 0 0 auto;
+}
+
+.services__item-svg rect {
+  fill: var(--gray);
+}
+
+.services__item:hover .services__item-svg rect {
+  fill: var(--dark-green);
+}
+
+.services__item:last-child {
+  flex-grow: 1;
+  max-width: 100%;
+  background-color: var(--dark-green);
+  color: var(--white);
+  background-image: url('../src/img/services-icon/line.svg');
 }
 
 /* Импорт TailWind */
@@ -2504,8 +2599,16 @@ body {
   z-index: 10;
 }
 
+.mb-0{
+  margin-bottom: 0px;
+}
+
 .mb-3{
   margin-bottom: 0.75rem;
+}
+
+.mb-7{
+  margin-bottom: 1.75rem;
 }
 
 .ml-5{
@@ -2676,6 +2779,11 @@ body {
 
 .uppercase{
   text-transform: uppercase;
+}
+
+.text-light-gray{
+  --tw-text-opacity: 1;
+  color: rgb(236 243 247 / var(--tw-text-opacity));
 }
 
 .underline{

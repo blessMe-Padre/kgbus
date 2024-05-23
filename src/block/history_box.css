@@ -47,7 +47,9 @@
     transform: translate(-50%, 0%);
 }
 
-#history_box .point .line > div {
+#history_box .point .line::before {
+    content: '';
+    display: block;
     width: 100%;
     height: 0%;
     background-color: #6cb778;
@@ -56,12 +58,12 @@
     transition-timing-function: linear;
 }
 
-#history_box .point:first-child .line > div,
-#history_box .point:last-child .line > div {
+#history_box .point:first-child .line::before,
+#history_box .point:last-child .line::before {
     transition-duration: 1s;
 }
 
-#history_box .point.animate .line > div {
+#history_box .point.animate .line::before {
     height: 100%;
 }
 
@@ -94,10 +96,12 @@
     background-color: #6cb778;
 }
 
-#history_box .point .mark_point > div {
+#history_box .point .mark_point::before {
+    content: '';
     position: absolute;
     top: 50%;
     left: 50%;
+    display: block;
     width: 15px;
     height: 15px;
     background-color: #ffffff;

@@ -7,6 +7,7 @@ import { initAccordions } from "./module/accordions.js";
 import { initArrowClass } from "./module/arrow-class-menu.js";
 import { initAnimateClass } from "./module/add_class_for_animation.js";
 import { initAppend } from "./module/appendElement.js";
+import { initBaguettes } from "./module/baguette_boxes.js";
 
 window.addEventListener('DOMContentLoaded', () => {
     console.log('подключен скрипт main.js');
@@ -22,6 +23,7 @@ window.addEventListener('DOMContentLoaded', () => {
     // baguetteBox.run('.gallery-wrapper');
 
     initAnimateClass();
+    initBaguettes();
 
     // DOMContentLoaded..
 

@@ -20,10 +20,24 @@
     height: 439px;
 }
 
-#gallery_box .photo img {
+#gallery_box a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+#gallery_box a > img {
     width: 100%;
     height: 100%;
     max-width: none;
     object-fit: cover;
-    border-radius: 20px;
+    transform: scale(1);
+    transition-property: transform;
+    transition-duration: 1s;
+}
+
+#gallery_box a:hover > img {
+    transform: scale(1.2);
 }

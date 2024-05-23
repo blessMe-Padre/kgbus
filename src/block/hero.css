@@ -1,12 +1,15 @@
 .hero {
-    padding: 100px 0 100px 50px;
+    padding: 100px 0 100px 100px;
     min-height: 700px;
     background-image: url('../src/img/bg/hero-banner.webp');
     background-repeat: no-repeat;
     background-size: contain;
-    background-position: right center;
+    background-position: right bottom;
     background-color: var(--light-gray);
     border-radius: 30px;
+
+    position: relative;
+    overflow: hidden;
 }
 
 @media (max-width: 769px) {

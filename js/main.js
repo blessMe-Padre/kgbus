@@ -9,6 +9,7 @@ import { initAnimateClass } from "./module/add_class_for_animation.js";
 import { initAppend } from "./module/appendElement.js";
 import { initPopup } from "./module/popup.js";
 import { initScrollAnimation } from "./module/scroll-animation.js";
+import { runRoachedRun } from "./module/run-roached.js";
 
 window.addEventListener('DOMContentLoaded', () => {
     console.log('подключен скрипт main.js');
@@ -19,6 +20,7 @@ window.addEventListener('DOMContentLoaded', () => {
     initAppend();
     initPopup();
     initScrollAnimation();
+    runRoachedRun();
     // initSlider();
     // initCurrentYear();
     // initScrollToTop();

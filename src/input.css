@@ -33,6 +33,7 @@
 @import './block/roached.css';
 @import './block/title.css';
 @import './block/services.css';
+@import './block/about.css';
 
 
 /* Импорт TailWind */
@@ -95,39 +96,39 @@
 /* Переменные */
 :root {
     /* Основные цвета */
-    --black         : #292e35;
-    --white         : #ffffff;
-    --green         : #6cb778;
-    --dark-green    : #3c7a59;
-    --gray          : #b5c2d7;
-    --light-gray    : #ecf3f7;
-    
+    --black: #292e35;
+    --white: #ffffff;
+    --green: #6cb778;
+    --dark-green: #3c7a59;
+    --gray: #b5c2d7;
+    --light-gray: #ecf3f7;
+
     /* Основной текст */
-    --font-family                       : 'involve', sans-serif;
-    --font-size                         : 16px;
-    --font-weight                       : 400;
+    --font-family: 'involve', sans-serif;
+    --font-size: 16px;
+    --font-weight: 400;
 
     /* Кнопки */
-    --button-bg-color                   : var(--green);
-    --button-bg-color-hover             : var(--dark-green);
-    --button-bg-color-disabled          : var(--gray);
-    --button-second-bg-color            : var(--white);
-    --button-second-bg-color-hover      : var(--green);
-    --button-second-bg-color-disabled   : var(--dark-green);
-    --button-text-color                 : var(--white);
-    --button-text-color-hover           : var(--white);
-    --button-text-color-disabled        : var(--white);
-    --button-second-text-color          : var(--green);
-    --button-second-text-color-hover    : var(--white);
-    --button-second-text-color-disabled : var(--white);
-    --slide-button                      : var(--gray);
-    --slide-button-hover                : var(--green);
-    --slide-button-action               : var(--dark-green);
+    --button-bg-color: var(--green);
+    --button-bg-color-hover: var(--dark-green);
+    --button-bg-color-disabled: var(--gray);
+    --button-second-bg-color: var(--white);
+    --button-second-bg-color-hover: var(--green);
+    --button-second-bg-color-disabled: var(--dark-green);
+    --button-text-color: var(--white);
+    --button-text-color-hover: var(--white);
+    --button-text-color-disabled: var(--white);
+    --button-second-text-color: var(--green);
+    --button-second-text-color-hover: var(--white);
+    --button-second-text-color-disabled: var(--white);
+    --slide-button: var(--gray);
+    --slide-button-hover: var(--green);
+    --slide-button-action: var(--dark-green);
 
     /* Ссылки */
-    --link-text-color                   : var(--gray);
-    --link-text-color-hover             : var(--green);
-    --link-text-color-disabled          : var(--dark-green);
+    --link-text-color: var(--gray);
+    --link-text-color-hover: var(--green);
+    --link-text-color-disabled: var(--dark-green);
 }
 
 /* Директивы классов */

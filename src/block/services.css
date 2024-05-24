@@ -77,6 +77,7 @@
     background-color: var(--green);
     color: var(--white);
     background-image: url('../src/img/services-icon/line.svg');
+    margin-right: 20px;
 }
 
 .services__item:last-child:hover {
@@ -90,6 +91,10 @@
 @media (max-width: 1164px) {
     .services__item {
         max-width: 31.5%;
+    }
+
+    .services__item:last-child {
+        margin-right: 0;
     }
 }
 

@@ -13,3 +13,7 @@
 .button:hover {
     background-color: var(--dark-green);
 }
+
+.button--large {
+    padding: 15px 40px;
+}

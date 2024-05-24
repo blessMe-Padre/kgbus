@@ -34,6 +34,7 @@
 @import './block/title.css';
 @import './block/services.css';
 @import './block/about.css';
+@import './block/tools.css';
 
 
 /* Импорт TailWind */
@@ -100,6 +101,7 @@
     --white: #ffffff;
     --green: #6cb778;
     --dark-green: #3c7a59;
+    --blur-green: #4d8f57;
     --gray: #b5c2d7;
     --light-gray: #ecf3f7;
 
@@ -131,8 +133,18 @@
     --link-text-color-disabled: var(--dark-green);
 }
 
-/* Директивы классов */
+/* Директивы data-scroll */
+[data-scroll] {
+    transition: opacity 1s
+}
 
+[data-scroll=in] {
+    opacity: 1
+}
+
+[data-scroll=out] {
+    opacity: 0
+}
 
 /* Прочие классы */
 
@@ -252,4 +264,23 @@ p {
 
 .link:hover {
     color: var(--green);
+}
+
+/* Классы для ховера на изображение */
+
+.image-wrapper {
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+.image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+    transition: transform 0.3s ease;
+}
+
+.image-wrapper img:hover {
+    transform: scale(1.1);
 }

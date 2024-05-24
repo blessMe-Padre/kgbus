@@ -20,6 +20,7 @@ module.exports = {
       'gray': '#b5c2d7',
       'light-gray': '#ecf3f7',
       'dark-green': '#3c7a59;',
+      'blur-green': '#4d8f57;',
     },
 
     container: {

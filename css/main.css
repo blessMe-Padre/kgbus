@@ -1482,6 +1482,7 @@ button.swiper-pagination-bullet{
 
 #faq_box .image {
   flex: 1;
+  border-radius: 20px;
 }
 
 #faq_box .image img {
@@ -1491,6 +1492,14 @@ button.swiper-pagination-bullet{
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 20px;
+  max-height: 320px;
+}
+
+@media (max-width: 1023px) {
+  #faq_box .faq {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
 }
 
 #reviews_box .rewiew {

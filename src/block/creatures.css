@@ -44,3 +44,63 @@
 .creature.virus {
     mask-image: url(../src/img/creatures/virus.svg);
 }
+
+#creature_1 {
+    width: 95.15px;
+    height: 95.15px;
+    left: 15%;
+    top: 92.8%;
+    transform: rotate(-17.48deg);
+}
+
+#creature_2 {
+    width: 40px;
+    height: 40px;
+    left: 56.4%;
+    top: 80.1%;
+    transform: rotate(13.03deg);
+}
+
+#creature_3 {
+    width: 18.85px;
+    height: 18.85px;
+    left: 95%;
+    top: 7%;
+    transform: rotate(56.67deg);
+}
+
+@media (max-width: 768px) {
+    #creature_1 {
+        left: 21.4%;
+        top: 94.7%;
+    }
+
+    #creature_2 {
+        left: 56.4%;
+        top: 80.1%;
+    }
+
+    #creature_3 {
+        left: 87.3%;
+        top: 11%;
+    }
+}
+
+@media (max-width: 375px) {
+    #creature_1 {
+        width: 45.4px;
+        height: 45.4px;
+        left: 90.7%;
+        top: 55.7%;
+    }
+
+    #creature_2 {
+        left: 56.4%;
+        top: 80.1%;
+    }
+
+    #creature_3 {
+        left: 86%;
+        top: 4.5%;
+    }
+}

@@ -11,7 +11,7 @@ section + section {
     background-color: #ffffff;
 }
 
-.section_group:not(:last-child) {
+.section_group:not(:last-of-type) {
     margin-bottom: calc(0px - var(--indent));
 }
 
@@ -19,11 +19,11 @@ section + section {
     padding-top: calc(var(--indent) + 100px);
 }
 
-.section_group:nth-child(odd) {
+.section_group:nth-of-type(even) {
     background-color: #ecf3f7;
 }
 
-.section_group:not(:last-child)::after {
+.section_group:not(:last-of-type)::after {
     content: '';
     display: block;
     width: 100%;
@@ -34,6 +34,6 @@ section + section {
     mask-position: center bottom;
 }
 
-.section_group:not(:last-child):nth-child(odd)::after {
+.section_group:not(:last-of-type):nth-of-type(even)::after {
     background-color: #ecf3f7;
 }

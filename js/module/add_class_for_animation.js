@@ -1,11 +1,12 @@
 export const initAnimateClass = () => {
     // Время срабатывания шага (в миллисекундах)
+    // Должно быть столько же, сколько в CSS-переменной --duration-add-animate-class
     const animate_time = 2000;
     // Класс для анимации
     const animate_class = 'animate';
     // Поиск списков
     const lists = document.querySelectorAll('ul.animate');
-
+console.log(document.querySelectorAll);
     // Перебор списков
     lists.forEach(function(ul, i) {
         // Получаем пункты списка
@@ -32,7 +33,7 @@ export const initAnimateClass = () => {
                     li.classList.add(animate_class);
                 }, timer);
 
-                timer += 2000;
+                timer += animate_time;
             }
         });
     });

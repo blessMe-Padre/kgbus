@@ -4,6 +4,10 @@
     padding: 40px 30px 40px;
 }
 
+#map_box {
+    padding: 0 0 50px 0;
+}
+
 #map_box .phone_number {
     font-family: 'involve';
     font-size: 24px;
@@ -39,4 +43,45 @@
     height: 600px;
     margin-top: 40px;
     border-radius: 20px;
+}
+
+#map_box .map iframe {
+    border-radius: 20px;
+}
+
+.points-list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.points-list .link {
+    text-wrap: nowrap;
+    font-size: clamp(1.125rem, 1.005rem + 0.55vw, 1.5rem);
+}
+
+@media (max-width: 1023px) {
+    .points-list {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    #map_box .map {
+        height: 400px;
+    }
+}
+
+@media (max-width: 630px) {
+    .points-list {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    #map_box .point {
+        padding: 20px;
+    }
+
+    #map_box .phone_number {
+        margin-bottom: 5px;
+    }
 }

@@ -2925,6 +2925,74 @@ section + section {
   }
 }
 
+.service-hero {
+  padding: 70px 50px;
+  background-color: var(--light-gray);
+  border-radius: 20px;
+  position: relative;
+}
+
+.service-hero__wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+
+.service-hero__wrapper .form-wrapper {
+  padding: 30px;
+  background-color: var(--white);
+  border-radius: 20px;
+  max-width: 480px;
+  margin-left: 40px;
+}
+
+.service-hero__wrapper .form-section__title {
+  font-size: 24px;
+  font-weight: 500;
+  margin-bottom: 20px;
+  line-height: 1.2;
+  max-width: 375px;
+}
+
+.service-hero__img {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+.sticker {
+  position: absolute;
+  right: -60px;
+  top: -100px;
+  width: 150px;
+  height: 150px;
+  background-color: var(--green);
+  border-radius: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.sticker .price {
+  font-weight: 700;
+  font-size: 30px;
+  color: #fff;
+}
+
+.sticker .sale {
+  font-weight: 500;
+  font-size: 20px;
+  text-decoration: line-through;
+  color: #fff;
+}
+
+.sticker__icon {
+  position: absolute;
+  top: 15px;
+  right: 30px;
+}
+
 /* Импорт TailWind */
 
 /* ! tailwindcss v3.3.3 | MIT License | https://tailwindcss.com */
@@ -3564,6 +3632,10 @@ body {
   margin-bottom: 1rem;
 }
 
+.mb-5{
+  margin-bottom: 1.25rem;
+}
+
 .mb-7{
   margin-bottom: 1.75rem;
 }
@@ -3862,6 +3934,10 @@ body {
   font-weight: 700;
 }
 
+.font-medium{
+  font-weight: 500;
+}
+
 .font-normal{
   font-weight: 400;
 }
@@ -4101,8 +4177,7 @@ p {
   color: var(--green);
 }
 
-@media (max-width: 768px)
-{
+@media (max-width: 768px) {
   h2 {
     font-size: 30px;
     line-height: 30px;

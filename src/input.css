@@ -40,6 +40,7 @@
 @import './block/main-form.css';
 @import './block/gos-uslugi.css';
 @import './block/footer.css';
+@import './block/service-hero.css';
 
 
 /* Импорт TailWind */
@@ -237,14 +238,13 @@ p {
     color: var(--green);
 }
 
-@media (max-width: 768px)
-{
+@media (max-width: 768px) {
     h2 {
         font-size: 30px;
         line-height: 30px;
         margin-bottom: 35px;
     }
-    
+
     .show_all {
         line-height: 30px;
     }

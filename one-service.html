@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <title>КГБУЗ</title>
+    
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/site.webmanifest">
+    <link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <!-- <link rel="stylesheet" href="css/swiper-bundle.min.css"> -->
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/baguetteBox.min.css">
+    <link rel=" stylesheet" href="css/main.css">
+</head>
+
+<body>
+    <div class="h-screen grid grid-rows-[auto_1fr_auto]">
+        <header class="z-10 w-full md-28 transition-colors">
+            <div class="container">
+                <div class="flex py-5">
+                    <img src="./src/img/logo.svg" alt="">
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <h1 class="visually-hidden">title</h1>
+
+            <div class="section_group">
+                <div class="container">
+                <section id="service-hero" class="service-hero">
+                        <div class="breadcrumbs flex">
+                            <a href="/index.html"><span>Главная</span></a>
+                            <a href="#"><span>Услуги</span></a>
+                            <span>Дезинфекция</span>
+                        </div>
+                        <div class="service-hero__wrapper">
+                            <div>
+                                <h2 class="title font-bold mb-5">Дезинфекция</h2>
+                                <p class="font-medium">Уничтожение возбудителей болезней в очаге инфекционного заболевания на объектах различных категорий</p>
+
+                                <img class="service-hero__img" src="./src/img/one-service/one-service-bg.webp" alt="">
+                            </div>
+                            <div>
+                                <div class="form-wrapper relative">
+
+                                    <div class="sticker">
+                                        <img class="sticker__icon" src="./src/img/one-service/crown.svg" width="38" height="28" alt="icon">
+                                        <span class="price">2 790 ₽</span>
+                                        <span class="sale">3000 ₽</span>
+                                    </div>
+                                    
+                                    <h3 class="form-section__title">Закажите услугу прямо сейчас и <span>получите скидку 10%</span></h3>
+                                    <form action="#" id="form" class="form validate-form flex-col">
+                                        <div class="form__item">
+                                            <label for="formName">Введите имя</label>
+                                            <input id="formName" type="text" name="name">
+                                        </div>
+                
+                                        <div class="form__item">
+                                            <label for="formName">Введите номер</label>
+                                            <input id="formPhone" type="tel" name="phone">
+                                        </div>
+                
+                                        <button type="submit" class="button">
+                                            <span>Заказать услугу</span>
+                                            <img src="./src/img/icons/arrow-right.svg" width="18" height="10" alt="кнопка заказать услугу">
+                                        </button>
+                                        
+                                    </form>
+                                    <p class="form-section__descriptions w-full">Нажимая кнопку «Заказать услуги», даю согласие на обработку персональных данных></p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+            
+            <div class="section_group"></div>
+        </main>
+
+        <footer class="py-12 wow fadeInUp">
+            <h2 class="visually-hidden">Контакты</h2>
+            <div class="container">
+                <div class="flex items-center justify-between flex-col sm:flex-row">
+                    <p class="mb-3">footer</p>
+                    <!-- <p class="mb-3">Политика конфиденциальности</p> -->
+                    <a class="hover:text-blue transition-colors mb-3" href="http://inside360.ru" target="_blank">Сделано
+                        в INSIDE360</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <div class="scroll-top">
+        <img src="./src/img/up-arrow.svg" alt="стрелка вверх">
+    </div>
+    <script src="js/swiper-bundle.min.js"></script>
+    <script src="js/wow.js"></script>
+    <script src="js/baguettebox.js"></script>
+    <script type="module" src="js/main.js"></script>
+</body>
+
+</html>

@@ -2629,6 +2629,68 @@ button.swiper-pagination-bullet{
   }
 }
 
+.footer__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 30px 0;
+  border-bottom: 1px solid #585f68;
+}
+
+.footer__wrapper {
+  padding: 50px 0;
+  border-bottom: 1px solid #585f68;
+  display: grid;
+  grid-template-columns: 45% 1fr;
+  gap: 20px;
+}
+
+.footer__wrapper ul {
+  -moz-column-count: 2;
+       column-count: 2;
+  -moz-column-gap: 20px;
+       column-gap: 20px;
+}
+
+.footer__wrapper h3 {
+  margin-bottom: 20px;
+  font-weight: 700;
+  font-size: 20px;
+  color: #fff;
+}
+
+.footer__wrapper li {
+  margin-bottom: 20px;
+}
+
+.footer__wrapper a {
+  color: var(--white);
+  transition: color 0.3s ease;
+}
+
+.footer__wrapper a:hover {
+  color: var(--green);
+}
+
+.footer__wrapper-nav li {
+  display: inline-block;
+}
+
+.footer__footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 20px;
+}
+
+.footer__footer p,
+.footer__footer a {
+  color: #585f68;
+  font-weight: 500;
+}
+
 /* Импорт TailWind */
 
 /* ! tailwindcss v3.3.3 | MIT License | https://tailwindcss.com */
@@ -3264,6 +3326,10 @@ body {
   margin-bottom: 0.75rem;
 }
 
+.mb-4{
+  margin-bottom: 1rem;
+}
+
 .mb-7{
   margin-bottom: 1.75rem;
 }
@@ -3447,6 +3513,10 @@ body {
   background-color: #4d8f57;;
 }
 
+.bg-dark-gray{
+  background-color: #3a414c;;
+}
+
 .bg-gray{
   --tw-bg-opacity: 1;
   background-color: rgb(181 194 215 / var(--tw-bg-opacity));
@@ -3455,6 +3525,10 @@ body {
 .bg-green{
   --tw-bg-opacity: 1;
   background-color: rgb(108 183 120 / var(--tw-bg-opacity));
+}
+
+.bg-transparent{
+  background-color: transparent;
 }
 
 .bg-white{
@@ -3478,6 +3552,11 @@ body {
 .px-3{
   padding-left: 0.75rem;
   padding-right: 0.75rem;
+}
+
+.px-4{
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
 .px-5{
@@ -3547,6 +3626,11 @@ body {
 
 .uppercase{
   text-transform: uppercase;
+}
+
+.text-black{
+  --tw-text-opacity: 1;
+  color: rgb(41 46 53 / var(--tw-text-opacity));
 }
 
 .text-gray{
@@ -3640,7 +3724,9 @@ body {
   --blur-green: #4d8f57;
   --gray: #b5c2d7;
   --light-gray: #ecf3f7;
+  --dark-gray: #3a414c;
   --blue: #a6cfff;
+  --blur-gray: #858994;
   /* Основной текст */
   --font-family: 'involve', sans-serif;
   --font-size: 16px;

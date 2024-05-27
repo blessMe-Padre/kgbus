@@ -55,3 +55,9 @@
     mask-size: contain;
     margin-left: 20px;
 }
+
+/* @media (max-width: 768px) {
+    #banner_box .banner {
+        padding: 0px;
+    }
+} */

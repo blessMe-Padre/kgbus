@@ -5,7 +5,9 @@ export const initAppend = () => {
 
     // при ширине экрана < 769px 
     if (window.innerWidth < 769) {
-        headerGroup.append(headerContact1);
-        headerGroup.append(headerContact2);
+        if(headerGroup) {
+            headerGroup.append(headerContact1);
+            headerGroup.append(headerContact2);
+        }
     }
 }

@@ -1,0 +1,39 @@
+section {
+    position: relative;
+}
+
+section + section {
+    margin-top: 120px;
+}
+
+.section_group {
+    --indent: 11vw;
+    background-color: #ffffff;
+}
+
+.section_group:not(:last-child) {
+    margin-bottom: calc(0px - var(--indent));
+}
+
+.section_group + .section_group {
+    padding-top: calc(var(--indent) + 100px);
+}
+
+.section_group:nth-child(odd) {
+    background-color: #ecf3f7;
+}
+
+.section_group:not(:last-child)::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: var(--indent);
+    background-color: #ffffff;
+    mask-image: url(../src/img/ellipse.svg);
+    mask-repeat: no-repeat;
+    mask-position: center bottom;
+}
+
+.section_group:not(:last-child):nth-child(odd)::after {
+    background-color: #ecf3f7;
+}

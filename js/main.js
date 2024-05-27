@@ -27,7 +27,7 @@ window.addEventListener('DOMContentLoaded', () => {
     initScrollAnimation();
     runRoachedRun();
     initMask();
-    // initSlider();
+    initSlider();
     // initCurrentYear();
     // initScrollToTop();
     // initScroll();

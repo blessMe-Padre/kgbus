@@ -209,7 +209,7 @@
                                 <li class="question">
                                     <div class="title">Средства, которые вы используете, безопасны?</div>
 
-                                    <!-- <p class="content">Средства, которые вы используете, безопасны?</p> -->
+                                    <p class="content">Средства, которые вы используете, безопасны?</p>
                                 </li>
                             </ul>
 
@@ -220,7 +220,10 @@
                     </section>
 
                     <section id="reviews_box">
-                        <h2><span>Отзывы</span> наших клиентов</h2>
+                        <div class="h-wrapper">
+                            <h2><span>Отзывы</span> наших клиентов</h2>
+                            <a class="show_all" href="">Посмотреть все</a>
+                        </div>
 
                         <ul class="reviews flex gap-5">
                             <li class="rewiew flex-1 flex flex-col">
@@ -289,8 +292,6 @@
                                 </div>
                             </li>
                         </ul>
-
-                        <a class="show_all" href="">Посмотреть все</a>
                     </section>
                 </div>
             </div>
@@ -310,67 +311,133 @@
                     </section>
 
                     <section id="news_box">
-                        <h2>Последние <span>новости учреждения</span></h2>
+                        <div class="h-wrapper">
+                            <h2>Последние <span>новости учреждения</span></h2>
+                            <a class="show_all" href="">Посмотреть все</a>
+                        </div>
 
-                        <ul class="news grid grid-cols-4 gap-5">
-                            <li class="news_once">
-                                <div class="image">
-                                    <img src="src/img/news_once_image.png" />
-                                </div>
+                        <div class="w-0 min-w-full relative">
+                            <div class="news-swiper swiper">
+                                <ul class="news swiper-wrapper justify-items-stretch">
+                                    <li class="news_once swiper-slide">
+                                        <div class="image">
+                                            <img src="src/img/news_once_image.png" />
+                                        </div>
 
-                                <div class="info flex flex-col gap-5">
-                                    <div class="title">Каких запахов боятся тараканы?</div>
+                                        <div class="info flex flex-col gap-5">
+                                            <div class="title">Каких запахов боятся тараканы?</div>
 
-                                    <div class="description">Порой кажется, что избавиться от тараканов попросту невозможно...</div>
+                                            <div class="description">Порой кажется, что избавиться от тараканов попросту невозможно...</div>
 
-                                    <div class="date">12.02.2023</div>
-                                </div>
-                            </li>
+                                            <div class="date">12.02.2023</div>
+                                        </div>
+                                    </li>
 
-                            <li class="news_once">
-                                <div class="image">
-                                    <img src="src/img/news_once_image.png" />
-                                </div>
+                                    <li class="news_once swiper-slide">
+                                        <div class="image">
+                                            <img src="src/img/news_once_image.png" />
+                                        </div>
 
-                                <div class="info flex flex-col gap-5">
-                                    <div class="title">Каких запахов боятся тараканы?</div>
+                                        <div class="info flex flex-col gap-5">
+                                            <div class="title">Каких запахов боятся тараканы?</div>
 
-                                    <div class="description">Порой кажется, что избавиться от тараканов попросту невозможно...</div>
+                                            <div class="description">Порой кажется, что избавиться от тараканов попросту невозможно...</div>
 
-                                    <div class="date">12.02.2023</div>
-                                </div>
-                            </li>
+                                            <div class="date">12.02.2023</div>
+                                        </div>
+                                    </li>
 
-                            <li class="news_once">
-                                <div class="image">
-                                    <img src="src/img/news_once_image.png" />
-                                </div>
+                                    <li class="news_once swiper-slide">
+                                        <div class="image">
+                                            <img src="src/img/news_once_image.png" />
+                                        </div>
 
-                                <div class="info flex flex-col gap-5">
-                                    <div class="title">Каких запахов боятся тараканы?</div>
+                                        <div class="info flex flex-col gap-5">
+                                            <div class="title">Каких запахов боятся тараканы?</div>
 
-                                    <div class="description">Порой кажется, что избавиться от тараканов попросту невозможно...</div>
+                                            <div class="description">Порой кажется, что избавиться от тараканов попросту невозможно...</div>
 
-                                    <div class="date">12.02.2023</div>
-                                </div>
-                            </li>
+                                            <div class="date">12.02.2023</div>
+                                        </div>
+                                    </li>
 
-                            <li class="news_once">
-                                <div class="image">
-                                    <img src="src/img/news_once_image.png" />
-                                </div>
+                                    <li class="news_once swiper-slide">
+                                        <div class="image">
+                                            <img src="src/img/news_once_image.png" />
+                                        </div>
 
-                                <div class="info flex flex-col gap-5">
-                                    <div class="title">Каких запахов боятся тараканы?</div>
+                                        <div class="info flex flex-col gap-5">
+                                            <div class="title">Каких запахов боятся тараканы?</div>
 
-                                    <div class="description">Порой кажется, что избавиться от тараканов попросту невозможно...</div>
+                                            <div class="description">Порой кажется, что избавиться от тараканов попросту невозможно...</div>
 
-                                    <div class="date">12.02.2023</div>
-                                </div>
-                            </li>
-                        </ul>
+                                            <div class="date">12.02.2023</div>
+                                        </div>
+                                    </li>
 
-                        <a class="show_all" href="">Посмотреть все</a>
+                                    <li class="news_once swiper-slide">
+                                        <div class="image">
+                                            <img src="src/img/news_once_image.png" />
+                                        </div>
+
+                                        <div class="info flex flex-col gap-5">
+                                            <div class="title">Каких запахов боятся тараканы?</div>
+
+                                            <div class="description">Порой кажется, что избавиться от тараканов попросту невозможно...</div>
+
+                                            <div class="date">12.02.2023</div>
+                                        </div>
+                                    </li>
+
+                                    <li class="news_once swiper-slide">
+                                        <div class="image">
+                                            <img src="src/img/news_once_image.png" />
+                                        </div>
+
+                                        <div class="info flex flex-col gap-5">
+                                            <div class="title">Каких запахов боятся тараканы?</div>
+
+                                            <div class="description">Порой кажется, что избавиться от тараканов попросту невозможно...</div>
+
+                                            <div class="date">12.02.2023</div>
+                                        </div>
+                                    </li>
+
+                                    <li class="news_once swiper-slide">
+                                        <div class="image">
+                                            <img src="src/img/news_once_image.png" />
+                                        </div>
+
+                                        <div class="info flex flex-col gap-5">
+                                            <div class="title">Каких запахов боятся тараканы?</div>
+
+                                            <div class="description">Порой кажется, что избавиться от тараканов попросту невозможно...</div>
+
+                                            <div class="date">12.02.2023</div>
+                                        </div>
+                                    </li>
+
+                                    <li class="news_once swiper-slide">
+                                        <div class="image">
+                                            <img src="src/img/news_once_image.png" />
+                                        </div>
+
+                                        <div class="info flex flex-col gap-5">
+                                            <div class="title">Каких запахов боятся тараканы?</div>
+
+                                            <div class="description">Порой кажется, что избавиться от тараканов попросту невозможно...</div>
+
+                                            <div class="date">12.02.2023</div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="swiper-buttons">
+                                <div class="swiper-button-prev swiper-button-prev--category"></div>
+                                <div class="swiper-button-next swiper-button-next--category"></div>
+                            </div>
+                        </div>
                     </section>
                 </div>
             </div>

@@ -6,6 +6,7 @@
 
 .breadcrumbs a {
     color: #a5b4cc;
+    margin-right: 3px;
 }
 
 .breadcrumbs a:hover > span {
@@ -15,4 +16,18 @@
 .breadcrumbs a::after {
     content: '/';
     margin-left: 4px;
+}
+
+@media (max-width: 768px) {
+    .breadcrumbs {
+        font-size: 12px;
+        line-height: 16px;
+        margin-bottom: 11px;
+    }
+}
+
+@media (max-width: 375px) {
+    .breadcrumbs {
+        margin-bottom: 25px;
+    }
 }

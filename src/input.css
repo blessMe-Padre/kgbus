@@ -140,6 +140,10 @@
     --link-text-color: var(--gray);
     --link-text-color-hover: var(--green);
     --link-text-color-disabled: var(--dark-green);
+
+    /* Длительность анимаций (указывать в секундах) */
+    --duration-add-animate-class: 2;    /* Должно быть столько же, сколько в переменной animate_time в файле js/module/add_class_for_animation.js */
+    --duration-hover: 0.5;
 }
 
 /* Директивы data-scroll */
@@ -241,8 +245,19 @@ p {
 @media (max-width: 768px) {
     h2 {
         font-size: 30px;
-        line-height: 30px;
+        line-height: 39px;
         margin-bottom: 35px;
+    }
+
+    h3 {
+        font-size: 32px;
+        line-height: 42px;
+        margin-bottom: 20px;
+    }
+    
+    p {
+        font-size: 16px;
+        line-height: 21px;
     }
 
     .show_all {
@@ -253,6 +268,16 @@ p {
 @media (max-width: 375px) {
     .h-wrapper {
         grid-template-columns: 1fr;
+    }
+
+    h3 {
+        font-size: 16px;
+        line-height: 21px;
+    }
+
+    p {
+        font-size: 12px;
+        line-height: 16px;
     }
 
     .show_all {

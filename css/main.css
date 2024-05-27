@@ -1520,7 +1520,7 @@ button.swiper-pagination-bullet{
 }
 
 @media (max-width: 769px) {
-  #faq_box .question .content. {
+  #faq_box .question .content {
     font-size: 14px;
   }
 }
@@ -2531,6 +2531,104 @@ button.swiper-pagination-bullet{
   }
 }
 
+.gos-uslugi {
+  padding-bottom: 50px;
+}
+
+.gos-uslugi__list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.gos-uslugi__item {
+  padding: 40px 40px;
+  border-radius: 20px;
+  min-height: 300px;
+}
+
+.gos-uslugi__item h3 {
+  font-size: clamp(1rem, 0.839rem + 0.734vw, 1.5rem);
+  line-height: 1.2;
+  color: var(--white);
+}
+
+.gos-uslugi__item:nth-child(1) {
+  background-image: url('../src/img/gos-uslugi/line1.png'), url('../src/img/gos-uslugi/bg-1.png');
+  background-repeat: no-repeat;
+  background-position: right bottom;
+}
+
+.gos-uslugi__item:nth-child(2) {
+  background-image: url('../src/img/gos-uslugi/bg2.png'), url('../src/img/gos-uslugi/line2.png');
+  background-repeat: no-repeat;
+  background-position: right bottom;
+}
+
+.gos-uslugi__item:nth-child(3) {
+  background-image: url('../src/img/gos-uslugi/bg3.png'), url('../src/img/gos-uslugi/line35.png');
+  background-repeat: no-repeat;
+  background-position: right bottom;
+}
+
+.gos-uslugi__link svg rect {
+  transition: all 0.3s ease;
+  fill: var(--white);
+}
+
+.gos-uslugi__link svg path {
+  fill: #B5C2D7;
+}
+
+.gos-uslugi__link:hover svg rect {
+  fill: var(--dark-green);
+}
+
+.gos-uslugi__link:hover svg path {
+  fill: var(--white);
+}
+
+@media (max-width: 1023px) {
+  .gos-uslugi__list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .gos-uslugi__item {
+    background-size: 200px;
+  }
+
+  .gos-uslugi__item:nth-child(1) {
+    background-size: 300px;
+  }
+
+  .gos-uslugi__item:nth-child(3) {
+    grid-column: 1/3;
+  }
+
+  .gos-uslugi__item h3 {
+    max-width: 400px;
+  }
+}
+
+@media (max-width: 767px) {
+  .gos-uslugi__list {
+    display: block;
+  }
+
+  .gos-uslugi__item {
+    margin-bottom: 30px;
+    min-height: 240px;
+  }
+
+  .gos-uslugi__item:nth-child(1) {
+    background-size: 250px;
+  }
+
+  .gos-uslugi__item:nth-child(2) {
+    background-size: 170px;
+  }
+}
+
 /* Импорт TailWind */
 
 /* ! tailwindcss v3.3.3 | MIT License | https://tailwindcss.com */
@@ -3341,6 +3439,10 @@ body {
   border-radius: 20px;
 }
 
+.bg-blue{
+  background-color: #a6cfff;;
+}
+
 .bg-blur-green{
   background-color: #4d8f57;;
 }
@@ -3538,6 +3640,7 @@ body {
   --blur-green: #4d8f57;
   --gray: #b5c2d7;
   --light-gray: #ecf3f7;
+  --blue: #a6cfff;
   /* Основной текст */
   --font-family: 'involve', sans-serif;
   --font-size: 16px;
@@ -3724,6 +3827,10 @@ p {
 
 .image-wrapper img:hover {
   transform: scale(1.1);
+}
+
+.hover\:text-blue:hover{
+  color: #a6cfff;;
 }
 
 @media (min-width: 769px){

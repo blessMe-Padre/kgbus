@@ -37,6 +37,7 @@
 @import './block/tools.css';
 @import './block/sales.css';
 @import './block/main-form.css';
+@import './block/gos-uslugi.css';
 
 
 /* Импорт TailWind */
@@ -106,6 +107,7 @@
     --blur-green: #4d8f57;
     --gray: #b5c2d7;
     --light-gray: #ecf3f7;
+    --blue: #a6cfff;
 
     /* Основной текст */
     --font-family: 'involve', sans-serif;

@@ -107,7 +107,7 @@
 }
 
 @media (max-width: 769px) {
-    #faq_box .question .content. {
+    #faq_box .question .content {
         font-size: 14px;
     }
 }

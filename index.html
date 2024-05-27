@@ -600,23 +600,27 @@
                 <div class="footer__header">
                     <img src="./src/img/logo-footer.png" width="178" height="50" alt="логотип">
                     <div class="flex items-center justify-between gap-5">
-                        <div class="flex gap-0 sm:gap-4">
-                            <img src="./src/img/icons/pin.svg" width="17" height="22" alt="pin">
-                            <select class="bg-transparent text-white" name="" id="">
-                                <option class="text-black py-2 px-4" value="">Уссурийск</option>
-                                <option class="text-black py-2 px-4" value="">Владивосток</option>
-                                <option class="text-black py-2 px-4" value="">Находка</option>
-                            </select>
-                        </div>
+                        
+                        <div class="footer-city">
+                            <div class="flex gap-0 sm:gap-4">
+                                <img src="./src/img/icons/pin.svg" width="17" height="22" alt="pin">
+                                <select class="bg-transparent text-white" name="" id="">
+                                    <option class="text-black py-2 px-4" value="">Уссурийск</option>
+                                    <option class="text-black py-2 px-4" value="">Владивосток</option>
+                                    <option class="text-black py-2 px-4" value="">Находка</option>
+                                </select>
+                            </div>
 
-                        <a class="text-green underline font-semibold" href="#" target="_blank" rel="noopener noreferrer">Схема проезда</a>
-
-                        <!-- сюда вставить шорткод "версии для слабовидящих"  -->
-                       <div class="py-2 px-5 bg-green rounded-3xl text-sm sm:text-base ml-5 sm:ml-0">
-                        Версия для слабовидящих
+                            <a class="text-green underline font-semibold" href="#" target="_blank" rel="noopener noreferrer">Схема проезда</a>
                         </div>
+                            
+                            <!-- сюда вставить шорткод "версии для слабовидящих"  -->
+                           <div class="py-2 px-5 bg-green rounded-3xl text-sm sm:text-base ml-5 sm:ml-0">
+                            Версия для слабовидящих
+                            </div>
                     </div>
                 </div>
+                <div class="footer-city-div"></div>
 
                 <div class="footer__wrapper">
                     <div>
@@ -636,8 +640,7 @@
                         </ul>
                     </div>
 
-                    <div class="flex">
-                        <div>
+                    <div class="">
                             <h3>Для Вас</h3>
                             <ul>
                                 <li><a href="#">Продукция</a></li>
@@ -652,21 +655,30 @@
                                 <li><a href="#">СП «Находка»</a></li>
                                 <li><a href="#">Испытательная лаборатория</a></li>
                             </ul>
-                        </div>
+                    </div>
 
-                        <div>
-                            <h3>Контакты</h3>
-                            <a class="font-bold" href="tel:+74234338229">8 (4234) 33 - 82 - 29</a>
-                            <p class="text-white text-sm mb-4">Отдел очаговой и профилактической дезинфекции</p>
+                    <div class="footer__contact-wrapper">
+                        <h3>Контакты</h3>
+                        <div class="footer__contact">
+                            <div>
+                                <a class="font-bold" href="tel:+74234338229">8 (4234) 33 - 82 - 29</a>
+                                <p class="text-white text-sm mb-4">Отдел очаговой и профилактической дезинфекции</p>
+                            </div>            
 
-                            <a class="font-bold" href="tel:+74234338102">8 (4234) 33 - 81 - 02</a>
-                            <p class="text-white text-sm mb-4">Главный врач</p>
+                            <div>
+                                <a class="font-bold" href="tel:+74234338102">8 (4234) 33 - 81 - 02</a>
+                                <p class="text-white text-sm mb-4">Главный врач</p>
+                            </div>
 
-                            <a class="font-bold" href="tel:+74234338100">8 (4234) 33 - 81 - 00</a>
-                            <p class="text-white text-sm mb-4">Отдел бухгалтерии</p>
+                            <div>
+                                <a class="font-bold" href="tel:+74234338100">8 (4234) 33 - 81 - 00</a>
+                                <p class="text-white text-sm mb-4">Отдел бухгалтерии</p>
+                            </div>
 
-                            <a class="font-bold" href="tel:+74234338102">8 (4234) 33 - 81 - 02</a>
-                            <p class="text-white text-sm mb-4">Специалист по персоналу</p>
+                            <div>
+                                <a class="font-bold" href="tel:+74234338102">8 (4234) 33 - 81 - 02</a>
+                                <p class="text-white text-sm mb-4">Специалист по персоналу</p>
+                            </div>
                         </div>
                     </div>
                 </div>

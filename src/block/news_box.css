@@ -27,6 +27,7 @@
     font-size: 20px;
     font-weight: 700;
     line-height: 26px;
+    margin-bottom: 0;
 }
 
 #news_box .description {
@@ -42,4 +43,24 @@
     font-weight: 400;
     line-height: 26px;
     color: #b5c2d7;
+}
+
+@media (max-width: 375px) {
+    #news_box .image {
+        height: 200px;
+    }
+
+    #news_box .title {
+        font-size: 16px;
+        line-height: 21px;
+    }
+
+    #news_box .description {
+        font-size: 14px;
+        line-height: 18px;
+    }
+
+    #news_box .date {
+        font-size: 14px;
+    }
 }

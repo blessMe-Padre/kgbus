@@ -13,6 +13,7 @@
 @import './block/video.css';
 @import './block/breadcrumbs.css';
 @import './block/creatures.css';
+@import './block/sections.css';
 
 /* Импорт стилей для страницы "Об учреждении" */
 @import './block/info_box.css';
@@ -155,44 +156,10 @@
 
 /* Прочие классы */
 
-section {
-    position: relative;
-}
-
-section+section {
-    margin-top: 120px;
-}
-
-.section_group {
-    --indent: 11vw;
-    background-color: #ffffff;
-}
-
-.section_group:not(:last-child) {
-    margin-bottom: calc(0px - var(--indent));
-}
-
-.section_group+.section_group {
-    padding-top: calc(var(--indent) + 100px);
-}
-
-.section_group:nth-child(odd) {
-    background-color: #ecf3f7;
-}
-
-.section_group:not(:last-child)::after {
-    content: '';
-    display: block;
-    width: 100%;
-    height: var(--indent);
-    background-color: #ffffff;
-    mask-image: url(../src/img/ellipse.svg);
-    mask-repeat: no-repeat;
-    mask-position: center bottom;
-}
-
-.section_group:not(:last-child):nth-child(odd)::after {
-    background-color: #ecf3f7;
+.h-wrapper {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: flex-start;
 }
 
 h2 {
@@ -240,9 +207,6 @@ p {
 }
 
 .show_all {
-    position: absolute;
-    top: 0px;
-    right: 0px;
     font-family: 'involve';
     font-size: 16px;
     font-weight: 600;
@@ -272,6 +236,31 @@ p {
 .link:hover {
     color: var(--green);
 }
+
+@media (max-width: 768px)
+{
+    h2 {
+        font-size: 30px;
+        line-height: 30px;
+        margin-bottom: 35px;
+    }
+    
+    .show_all {
+        line-height: 30px;
+    }
+}
+
+@media (max-width: 375px) {
+    .h-wrapper {
+        grid-template-columns: 1fr;
+    }
+
+    .show_all {
+        justify-self: center;
+        margin-bottom: 20px;
+    }
+}
+
 
 /* Классы для ховера на изображение */
 

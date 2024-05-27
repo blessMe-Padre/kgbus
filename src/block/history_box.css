@@ -124,3 +124,24 @@
 #history_box .point:not(:last-child) .text {
     margin-bottom: 30px;
 }
+
+/* @media (max-width: 768px)
+{
+    #history_box .point {
+        grid-template-columns: 30px 1fr;
+        grid-template-rows: auto auto;
+    }
+
+    #history_box .point .date {
+        order: 2;
+    }
+
+    #history_box .point .mark {
+        grid-row: span 2;
+        order: 1;
+    }
+
+    #history_box .point .text {
+        order: 3;
+    }
+} */

@@ -3179,6 +3179,60 @@ section + section {
   }
 }
 
+@media (max-width: 522px) {
+  .service-hero {
+    padding: 70px 15px;
+  }
+
+  .service-hero__wrapper .form-wrapper .form {
+    grid-template-columns: 1fr;
+  }
+
+  .service-hero__wrapper h2 {
+    text-align: center;
+  }
+
+  .service-hero__wrapper-text {
+    font-size: 14px;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  .sticker {
+    width: 90px;
+    height: 90px;
+    top: -50px;
+    right: 50%;
+    transform: translateX(50%);
+  }
+
+  .sticker .price {
+    font-size: 18px;
+    line-height: 1;
+  }
+
+  .sticker .sale {
+    font-size: 12px;
+  }
+
+  .sticker .sticker__icon {
+    width: 20px;
+    height: 15px;
+    top: 10px;
+    right: 20px;
+  }
+
+  .service-hero__wrapper .form-wrapper {
+    padding-top: 50px;
+    padding-bottom: 70px;
+  }
+
+  .service-hero__img {
+    left: 50px;
+    z-index: 1;
+  }
+}
+
 /* Импорт TailWind */
 
 /* ! tailwindcss v3.3.3 | MIT License | https://tailwindcss.com */

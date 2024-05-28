@@ -122,6 +122,7 @@
 @media (max-width: 522px) {
     .service-hero {
         padding: 70px 15px;
+        overflow: hidden;
     }
 
     .service-hero__wrapper .form-wrapper .form {

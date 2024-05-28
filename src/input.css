@@ -41,6 +41,7 @@
 @import './block/gos-uslugi.css';
 @import './block/footer.css';
 @import './block/service-hero.css';
+@import './block/about-service.css';
 
 
 /* Импорт TailWind */
@@ -142,7 +143,8 @@
     --link-text-color-disabled: var(--dark-green);
 
     /* Длительность анимаций (указывать в секундах) */
-    --duration-add-animate-class: 2;    /* Должно быть столько же, сколько в переменной animate_time в файле js/module/add_class_for_animation.js */
+    --duration-add-animate-class: 2;
+    /* Должно быть столько же, сколько в переменной animate_time в файле js/module/add_class_for_animation.js */
     --duration-hover: 0.5;
 }
 
@@ -254,7 +256,7 @@ p {
         line-height: 42px;
         margin-bottom: 20px;
     }
-    
+
     p {
         font-size: 16px;
         line-height: 21px;

@@ -27,6 +27,11 @@
     max-width: 375px;
 }
 
+.service-hero__wrapper .form-section__descriptions {
+    font-size: 12px;
+    line-height: 1.2;
+}
+
 .service-hero__img {
     position: absolute;
     left: 0;
@@ -51,6 +56,7 @@
     font-weight: 700;
     font-size: 30px;
     color: #fff;
+    padding: 0;
 }
 
 .sticker .sale {
@@ -172,4 +178,21 @@
         left: 50px;
         z-index: 1;
     }
+}
+
+/* страница дезинсекции */
+
+.service-hero__wrapper-text--dez {
+    position: relative;
+    max-width: 380px;
+}
+
+.service-hero__wrapper-text--dez img {
+    position: absolute;
+    top: 0;
+    left: -30px;
+}
+
+.service-hero__img--dez {
+    max-width: 70%;
 }

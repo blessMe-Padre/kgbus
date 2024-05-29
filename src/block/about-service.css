@@ -51,3 +51,8 @@
         max-height: 220px;
     }
 }
+
+
+.about-service__img--dez img {
+    max-height: 400px;
+}

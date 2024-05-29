@@ -3289,6 +3289,68 @@ section + section {
   }
 }
 
+.service-description {
+  padding: 40px 30px;
+  background-color: var(--light-gray);
+  border-radius: 20px;
+  position: relative;
+}
+
+.service-description-img-1 {
+  position: absolute;
+  top: 0;
+  right: 50px;
+  transition: all 0.3s ease;
+  animation: rightToLeft 15s forwards infinite;
+}
+
+.service-description-img-2 {
+  position: absolute;
+  bottom: 100px;
+  left: 0;
+  transition: all 0.3s ease;
+  animation: bottomToTop 15s forwards infinite;
+}
+
+@media (max-width: 768px) {
+  .service-description-img-1 {
+    width: 80px;
+    height: 80px;
+  }
+
+  .service-description {
+    padding-bottom: 20px;
+  }
+}
+
+@keyframes rightToLeft {
+  0% {
+    transform: translateX(0);
+  }
+
+  50% {
+    transform: translateX(-100%);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes bottomToTop {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-100%);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
 /* Импорт TailWind */
 
 /* ! tailwindcss v3.3.3 | MIT License | https://tailwindcss.com */
@@ -3978,6 +4040,10 @@ body {
 
 .flex-1{
   flex: 1 1 0%;
+}
+
+.transform{
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
 .grid-cols-3{

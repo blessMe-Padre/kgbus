@@ -1,0 +1,29 @@
+.price-section {}
+
+.price-section__list {
+    border-radius: 20px;
+    border: 1px solid #e4eaf4;
+}
+
+.price-section__list li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 20px 20px;
+    font-size: 20px;
+    color: #292e35;
+}
+
+.price-section__list li:first-child {
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+}
+
+.price-section__list li span {
+    font-weight: 600;
+}
+
+.price-section__list li:nth-child(odd) {
+    background-color: #e4eaf4;
+}

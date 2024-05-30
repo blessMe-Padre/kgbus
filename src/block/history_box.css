@@ -110,7 +110,6 @@
 
 #history_box .point .text {
     width: 100%;
-    font-family: 'involve';
     font-size: 20px;
     font-weight: 500;
     line-height: 26px;
@@ -143,27 +142,6 @@
     #history_box .point .mark {
         grid-row: span 2;
         order: 1;
-        align-items: flex-start;
-        padding-top: 5px;
-    }
-
-    #history_box .point .mark_point {
-
-    }
-
-    #history_box .point .line {
-
-    }
-
-    #history_box .point .line::before,
-    #history_box .point:first-child .line::before,
-    #history_box .point:last-child .line::before {
-        transition-duration: calc(var(--duration-add-animate-class)* 1s);
-    }
-
-    #history_box .point:first-child .line {
-        top: 20px;
-        height: calc(100% - 5px - 15px);
     }
 
     #history_box .point .text {

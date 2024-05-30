@@ -1,3 +1,9 @@
+#sertificates_box .sertificates {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 74px;
+}
+
 #sertificates_box .sertificate {
     position: relative;
     z-index: 0;
@@ -5,7 +11,7 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    padding: 57px 48px 37px;
+    padding: 57px 45px 37px;
     border-radius: 20px;
     transition-property: background-color;
     transition-duration: 0.5s;
@@ -27,10 +33,20 @@
     background-image: url(../src/img/sert_back_3.png);
 }
 
+#sertificates_box .sertificate .image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 382px;
+    margin-bottom: 32px;
+}
+
 #sertificates_box .sertificate .show_file {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 13px;
     font-size: 20px;
     font-weight: 600;
     line-height: 27px;
@@ -47,4 +63,34 @@
     mask-repeat: no-repeat;
     mask-position: center;
     mask-size: contain;
+}
+
+@media (max-width: 768px) {
+    #sertificates_box .sertificates {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    #sertificates_box .sertificate {
+        padding: 57px 18px 37px;
+    }
+}
+
+@media (max-width: 375px) {
+    #sertificates_box .sertificates {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    #sertificates_box .sertificate {
+        padding: 57px 33px 37px;
+    }
+
+    #sertificates_box .sertificate .image {
+        height: 308px;
+        margin-bottom: 27px;
+    }
+
+    #sertificates_box .sertificate .show_file {
+        justify-content: center;
+    }
 }

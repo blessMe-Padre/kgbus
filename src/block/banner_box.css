@@ -11,20 +11,18 @@
 }
 
 #banner_box .title {
-    font-family: 'involve';
     font-size: 60px;
     font-weight: 700;
     line-height: 80px;
     color: #ffffff;
+    margin-bottom: 0px;
 }
 
 #banner_box .description {
-    font-family: 'involve';
     font-size: 20px;
     font-weight: 600;
     line-height: 27px;
     color: #ffffff;
-
 }
 
 #banner_box .button {
@@ -35,7 +33,6 @@
     border: none;
     background-color: #ffffff;
     border-radius: 100px;
-    font-family: 'involve';
     font-size: 18px;
     font-weight: 700;
     line-height: 24px;
@@ -56,8 +53,31 @@
     margin-left: 20px;
 }
 
-/* @media (max-width: 768px) {
+@media (max-width: 768px) {
     #banner_box .banner {
-        padding: 0px;
+        height: 270px;
+        padding: 50px 140px 77px;
     }
-} */
+
+    #banner_box .title {
+        font-size: 30px;
+        line-height: 40px;
+    }
+
+    #banner_box .description {
+        font-size: 16px;
+        line-height: 21px;
+    }
+
+    #banner_box .button {
+        font-size: 16px;
+        line-height: 21px;
+        padding: 14px 46px 14px;
+    }
+}
+
+@media (max-width: 768px) {
+    #banner_box .banner {
+        padding: 0px 0px 0px;
+    }
+}

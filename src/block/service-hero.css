@@ -3,6 +3,7 @@
     background-color: var(--light-gray);
     border-radius: 20px;
     position: relative;
+    min-height: 700px;
 }
 
 .service-hero__wrapper {
@@ -37,6 +38,8 @@
     left: 0;
     bottom: 0;
 }
+
+.service-hero__img--akar {}
 
 .sticker {
     position: absolute;

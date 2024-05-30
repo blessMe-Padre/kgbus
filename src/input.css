@@ -28,6 +28,7 @@
 
 @import './block/services-menu.css';
 @import './block/header.css';
+@import './block/animations.css';
 
 @import './block/hero.css';
 @import './block/popup.css';
@@ -46,6 +47,7 @@
 @import './block/price.css';
 @import './block/how.css';
 @import './block/insects.css';
+@import './block/rats.css';
 
 
 /* Импорт TailWind */

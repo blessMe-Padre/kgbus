@@ -1,0 +1,47 @@
+.how {
+    padding: 50px 0;
+}
+
+.how__list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.how__item {
+    padding: 40px;
+    border-radius: 20px;
+}
+
+.how__item h3 {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 100px;
+    margin-bottom: 30px;
+}
+
+@media (max-width: 1023px) {
+    .how__list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .how__item p {
+        font-style: 12px;
+    }
+}
+
+@media (max-width: 550px) {
+    .how__list {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .how__item {
+        padding: 20px;
+    }
+
+    .how__item h3 {
+        padding: 5px 10px;
+        font-size: 16px;
+        line-height: 1;
+    }
+}

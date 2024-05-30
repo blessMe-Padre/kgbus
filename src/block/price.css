@@ -1,0 +1,50 @@
+.price {
+    padding: 30px 0;
+}
+
+.price__wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+.price__table {
+    padding: 0 20px;
+}
+
+.price__table th {
+    padding: 10px 0;
+    background: #a5b4cc;
+    color: var(--white);
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.price__table td {
+    padding: 10px 20px;
+}
+
+.price__table tr:nth-child(odd) {
+    background: #e4eaf4;
+}
+
+.price__table tr:nth-child(even) {
+    background: #ffffff;
+}
+
+.price__table tbody tr:last-child {
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.price__table td:nth-child(even) {
+    display: flex;
+    justify-content: flex-end;
+    font-weight: 700;
+}
+
+@media (max-width: 687px) {
+    .price__wrapper {
+        grid-template-columns: 1fr;
+    }
+}

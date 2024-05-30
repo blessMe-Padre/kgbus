@@ -1,0 +1,51 @@
+.bacteria-services {
+    padding: 50px 0;
+}
+
+.bacteria-services__list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.bacteria-services__item {
+    background-color: var(--white);
+    padding: 40px;
+}
+
+.bacteria-services__item p {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.2;
+}
+
+.bacteria-services__count {
+    color: var(--green);
+    margin-bottom: 30px;
+}
+
+@media (max-width: 1023px) {
+    .bacteria-services__list {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .bacteria-services__item p {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 769px) {
+    .bacteria-services__list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 460px) {
+    .bacteria-services__list {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .bacteria-services__item {
+        padding: 20px;
+    }
+}

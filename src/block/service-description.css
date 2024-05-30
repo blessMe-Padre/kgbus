@@ -1,0 +1,34 @@
+.service-description {
+    padding: 40px 30px;
+    background-color: var(--light-gray);
+    border-radius: 20px;
+
+    position: relative;
+}
+
+.service-description-img-1 {
+    position: absolute;
+    top: 0;
+    right: 50px;
+    transition: all 0.3s ease;
+    animation: rightToLeft 15s forwards infinite;
+}
+
+.service-description-img-2 {
+    position: absolute;
+    bottom: 100px;
+    left: 0;
+    transition: all 0.3s ease;
+    animation: bottomToTop 15s forwards infinite;
+}
+
+@media (max-width: 768px) {
+    .service-description-img-1 {
+        width: 80px;
+        height: 80px;
+    }
+
+    .service-description {
+        padding-bottom: 20px;
+    }
+}

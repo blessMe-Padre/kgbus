@@ -1,0 +1,63 @@
+.about-service {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.about-service__description {
+    border-radius: 20px;
+    background-color: var(--light-gray);
+    padding: 40px;
+}
+
+.about-service__description p {
+    font-size: 18px;
+}
+
+.about-service__img img {
+    border-radius: 20px;
+}
+
+@media (max-width: 1023px) {
+    .about-service {
+        grid-template-columns: 1fr;
+    }
+
+    .about-service__description p {
+        font-size: 14px;
+    }
+
+    .about-service__img {
+        max-height: 300px;
+    }
+
+    .about-service__img img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .about-service--reverse .about-service__img {
+        grid-row: 2/3;
+    }
+}
+
+@media (max-width: 550px) {
+    .about-service {
+        margin-top: 60px;
+    }
+
+    .about-service__img {
+        max-height: 220px;
+    }
+
+    .about-service__description {
+        padding: 20px;
+    }
+
+}
+
+
+.about-service__img--dez img {
+    max-height: 400px;
+}

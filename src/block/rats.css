@@ -1,0 +1,66 @@
+.rats {
+    padding: 50px 0;
+}
+
+.rats__wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+.rats__item {
+    padding: 40px 40px;
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+}
+
+@media (max-width: 1023px) {
+    .rats__item {
+        padding: 40px 20px;
+        border-radius: 20px;
+    }
+
+    .rats__item p {
+        font-size: 14px;
+    }
+}
+
+@media (max-width:769px) {
+    .rats__item .image-wrapper {
+        position: absolute;
+        top: 100px;
+        left: -25px;
+        width: 484px;
+        height: 260px;
+    }
+
+    .rats__item p {
+        font-size: 14px;
+    }
+}
+
+@media (max-width:590px) {
+    .rats {
+        margin-top: 50px;
+    }
+
+    .rats__wrapper {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .rats__item .image-wrapper {
+        position: static;
+        width: 100%;
+        height: 100%;
+    }
+
+    .rats__item--img {
+        padding: 0;
+    }
+
+    .rats__item--mouse {
+        grid-row: 2/3;
+    }
+}

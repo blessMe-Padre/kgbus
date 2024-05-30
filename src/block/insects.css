@@ -1,0 +1,53 @@
+.insects {
+    padding: 50px 0;
+}
+
+.insects__list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.insects__item {
+    border: 1px solid #e3e9f3;
+    border-radius: 20px;
+    padding: 30px;
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.insects__item img {
+    /* margin: 0 auto 20px; */
+    max-width: 208px;
+    max-height: 170px;
+    object-fit: cover;
+}
+
+.insects__item p {
+    display: block;
+    background-color: var(--green);
+    color: var(--white);
+    border-radius: 40px;
+    padding: 5px 20px;
+    width: 100%;
+    max-width: 203px;
+}
+
+@media (max-width:769px) {
+    .insects__list {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+}
+
+@media (max-width:420px) {
+    .insects__list {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 20px;
+    }
+}

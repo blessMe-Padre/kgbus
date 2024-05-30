@@ -46,16 +46,6 @@
     animation: run1 1.5s infinite alternate;
 }
 
-@keyframes run1 {
-    0% {
-        transform: translate(0, 0);
-    }
-
-    100% {
-        transform: translate(-70px, 50px);
-    }
-}
-
 .main-form__bag2 {
     display: none;
 }

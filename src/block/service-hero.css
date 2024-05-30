@@ -3,6 +3,7 @@
     background-color: var(--light-gray);
     border-radius: 20px;
     position: relative;
+    min-height: 700px;
 }
 
 .service-hero__wrapper {
@@ -27,11 +28,18 @@
     max-width: 375px;
 }
 
+.service-hero__wrapper .form-section__descriptions {
+    font-size: 12px;
+    line-height: 1.2;
+}
+
 .service-hero__img {
     position: absolute;
     left: 0;
     bottom: 0;
 }
+
+.service-hero__img--akar {}
 
 .sticker {
     position: absolute;
@@ -51,6 +59,7 @@
     font-weight: 700;
     font-size: 30px;
     color: #fff;
+    padding: 0;
 }
 
 .sticker .sale {
@@ -117,4 +126,76 @@
         top: 5px;
         right: 25px;
     }
+}
+
+@media (max-width: 522px) {
+    .service-hero {
+        padding: 70px 15px;
+        overflow: hidden;
+    }
+
+    .service-hero__wrapper .form-wrapper .form {
+        grid-template-columns: 1fr;
+    }
+
+    .service-hero__wrapper h2 {
+        text-align: center;
+    }
+
+    .service-hero__wrapper-text {
+        font-size: 14px;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    .sticker {
+        width: 90px;
+        height: 90px;
+        top: -50px;
+        right: 50%;
+        transform: translateX(50%);
+    }
+
+    .sticker .price {
+        font-size: 18px;
+        line-height: 1;
+    }
+
+    .sticker .sale {
+        font-size: 12px;
+    }
+
+    .sticker .sticker__icon {
+        width: 20px;
+        height: 15px;
+        top: 10px;
+        right: 20px;
+    }
+
+    .service-hero__wrapper .form-wrapper {
+        padding-top: 50px;
+        padding-bottom: 70px;
+    }
+
+    .service-hero__img {
+        left: 50px;
+        z-index: 1;
+    }
+}
+
+/* страница дезинсекции */
+
+.service-hero__wrapper-text--dez {
+    position: relative;
+    max-width: 380px;
+}
+
+.service-hero__wrapper-text--dez img {
+    position: absolute;
+    top: 0;
+    left: -30px;
+}
+
+.service-hero__img--dez {
+    max-width: 70%;
 }

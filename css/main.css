@@ -3318,7 +3318,7 @@ section+section {
 .about-service__description {
   border-radius: 20px;
   background-color: var(--light-gray);
-  padding: 30px 30px;
+  padding: 40px;
 }
 
 .about-service__description p {
@@ -3361,6 +3361,10 @@ section+section {
 
   .about-service__img {
     max-height: 220px;
+  }
+
+  .about-service__description {
+    padding: 20px;
   }
 }
 
@@ -3619,6 +3623,58 @@ section+section {
 
   .rats__item--mouse {
     grid-row: 2/3;
+  }
+}
+
+.bacteria-services {
+  padding: 50px 0;
+}
+
+.bacteria-services__list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.bacteria-services__item {
+  background-color: var(--white);
+  padding: 40px;
+}
+
+.bacteria-services__item p {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.2;
+}
+
+.bacteria-services__count {
+  color: var(--green);
+  margin-bottom: 30px;
+}
+
+@media (max-width: 1023px) {
+  .bacteria-services__list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .bacteria-services__item p {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 769px) {
+  .bacteria-services__list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 460px) {
+  .bacteria-services__list {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .bacteria-services__item {
+    padding: 20px;
   }
 }
 
@@ -4483,6 +4539,14 @@ body {
 
 .pb-10{
   padding-bottom: 2.5rem;
+}
+
+.pb-4{
+  padding-bottom: 1rem;
+}
+
+.pl-6{
+  padding-left: 1.5rem;
 }
 
 .pl-8{

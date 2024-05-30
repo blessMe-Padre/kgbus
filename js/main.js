@@ -14,6 +14,7 @@ import { initPopup } from "./module/popup.js";
 import { initScrollAnimation } from "./module/scroll-animation.js";
 import { runRoachedRun } from "./module/run-roached.js";
 import { initMask } from "./module/phone-mask.js";
+import { initItemsCount } from "./module/item-count.js";
 
 
 window.addEventListener('DOMContentLoaded', () => {
@@ -28,6 +29,7 @@ window.addEventListener('DOMContentLoaded', () => {
     runRoachedRun();
     initMask();
     initSlider();
+    initItemsCount();
     // initCurrentYear();
     // initScrollToTop();
     // initScroll();

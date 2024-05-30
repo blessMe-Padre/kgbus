@@ -7,7 +7,7 @@
 .about-service__description {
     border-radius: 20px;
     background-color: var(--light-gray);
-    padding: 30px 30px;
+    padding: 40px;
 }
 
 .about-service__description p {
@@ -50,6 +50,11 @@
     .about-service__img {
         max-height: 220px;
     }
+
+    .about-service__description {
+        padding: 20px;
+    }
+
 }
 
 

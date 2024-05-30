@@ -446,7 +446,8 @@
 }
 
 .swiper-centered.swiper-horizontal>.swiper-wrapper>.swiper-slide:first-child{
-  margin-inline-start:var(--swiper-centered-offset-before)
+  -webkit-margin-start:var(--swiper-centered-offset-before);
+          margin-inline-start:var(--swiper-centered-offset-before)
 }
 
 .swiper-centered.swiper-horizontal>.swiper-wrapper::before{
@@ -456,7 +457,8 @@
 }
 
 .swiper-centered.swiper-vertical>.swiper-wrapper>.swiper-slide:first-child{
-  margin-block-start:var(--swiper-centered-offset-before)
+  -webkit-margin-before:var(--swiper-centered-offset-before);
+          margin-block-start:var(--swiper-centered-offset-before)
 }
 
 .swiper-centered.swiper-vertical>.swiper-wrapper::before{
@@ -2066,6 +2068,10 @@ section + section {
   padding: 40px 30px 40px;
 }
 
+#map_box {
+  padding: 0 0 50px 0;
+}
+
 #map_box .phone_number {
   font-family: 'involve';
   font-size: 24px;
@@ -2105,6 +2111,47 @@ section + section {
   height: 600px;
   margin-top: 40px;
   border-radius: 20px;
+}
+
+#map_box .map iframe {
+  border-radius: 20px;
+}
+
+.points-list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.points-list .link {
+  text-wrap: nowrap;
+  font-size: clamp(1.125rem, 1.005rem + 0.55vw, 1.5rem);
+}
+
+@media (max-width: 1023px) {
+  .points-list {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  #map_box .map {
+    height: 400px;
+  }
+}
+
+@media (max-width: 630px) {
+  .points-list {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  #map_box .point {
+    padding: 20px;
+  }
+
+  #map_box .phone_number {
+    margin-bottom: 5px;
+  }
 }
 
 .services-menu {
@@ -3109,9 +3156,130 @@ section + section {
   }
 }
 
+.service-hero {
+  padding: 70px 50px;
+  background-color: var(--light-gray);
+  border-radius: 20px;
+  position: relative;
+}
+
+.service-hero__wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+
+.service-hero__wrapper .form-wrapper {
+  padding: 30px;
+  background-color: var(--white);
+  border-radius: 20px;
+  max-width: 480px;
+  margin-left: 40px;
+}
+
+.service-hero__wrapper .form-section__title {
+  font-size: 24px;
+  font-weight: 500;
+  margin-bottom: 20px;
+  line-height: 1.2;
+  max-width: 375px;
+}
+
+.service-hero__img {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+.sticker {
+  position: absolute;
+  right: -60px;
+  top: -100px;
+  width: 150px;
+  height: 150px;
+  background-color: var(--green);
+  border-radius: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.sticker .price {
+  font-weight: 700;
+  font-size: 30px;
+  color: #fff;
+}
+
+.sticker .sale {
+  font-weight: 500;
+  font-size: 20px;
+  text-decoration: line-through;
+  color: #fff;
+}
+
+.sticker__icon {
+  position: absolute;
+  top: 15px;
+  right: 30px;
+}
+
+@media (max-width: 769px) {
+  .service-hero__wrapper {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .service-hero__wrapper .form-wrapper {
+    max-width: 100%;
+    margin-left: 0;
+  }
+
+  .service-hero__wrapper .form-wrapper .form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+
+  .service-hero__wrapper .form-section__title {
+    font-size: 18px;
+    max-width: 100%;
+  }
+
+  .service-hero__wrapper .form-section__descriptions {
+    font-size: 10px;
+    color: #858994;
+    line-height: 1.2;
+  }
+
+  .service-hero__wrapper .form-wrapper .button {
+    margin: 0;
+  }
+
+  .sticker {
+    width: 115px;
+    height: 115px;
+    right: -50px;
+    top: -60px;
+  }
+
+  .sticker .price {
+    font-size: 24px;
+  }
+
+  .sticker .sale {
+    font-size: 14px;
+  }
+
+  .sticker__icon {
+    top: 5px;
+    right: 25px;
+  }
+}
+
 /* Импорт TailWind */
 
-/* ! tailwindcss v3.4.3 | MIT License | https://tailwindcss.com */
+/* ! tailwindcss v3.3.3 | MIT License | https://tailwindcss.com */
 
 /*
 1. Prevent padding and border from affecting element width. (https://github.com/mozdevs/cssremedy/issues/4)
@@ -3143,11 +3311,9 @@ section + section {
 4. Use the user's configured `sans` font-family by default.
 5. Use the user's configured `sans` font-feature-settings by default.
 6. Use the user's configured `sans` font-variation-settings by default.
-7. Disable tap highlights on iOS
 */
 
-html,
-:host {
+html {
   line-height: 1.5;
   /* 1 */
   -webkit-text-size-adjust: 100%;
@@ -3157,14 +3323,12 @@ html,
   -o-tab-size: 4;
      tab-size: 4;
   /* 3 */
-  font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   /* 4 */
   font-feature-settings: normal;
   /* 5 */
   font-variation-settings: normal;
   /* 6 */
-  -webkit-tap-highlight-color: transparent;
-  /* 7 */
 }
 
 /*
@@ -3236,10 +3400,8 @@ strong {
 }
 
 /*
-1. Use the user's configured `mono` font-family by default.
-2. Use the user's configured `mono` font-feature-settings by default.
-3. Use the user's configured `mono` font-variation-settings by default.
-4. Correct the odd `em` font sizing in all browsers.
+1. Use the user's configured `mono` font family by default.
+2. Correct the odd `em` font sizing in all browsers.
 */
 
 code,
@@ -3248,12 +3410,8 @@ samp,
 pre {
   font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   /* 1 */
-  font-feature-settings: normal;
-  /* 2 */
-  font-variation-settings: normal;
-  /* 3 */
   font-size: 1em;
-  /* 4 */
+  /* 2 */
 }
 
 /*
@@ -3322,8 +3480,6 @@ textarea {
   /* 1 */
   line-height: inherit;
   /* 1 */
-  letter-spacing: inherit;
-  /* 1 */
   color: inherit;
   /* 1 */
   margin: 0;
@@ -3347,9 +3503,9 @@ select {
 */
 
 button,
-input:where([type='button']),
-input:where([type='reset']),
-input:where([type='submit']) {
+[type='button'],
+[type='reset'],
+[type='submit'] {
   -webkit-appearance: button;
   /* 1 */
   background-color: transparent;
@@ -3616,10 +3772,6 @@ body {
   --tw-backdrop-opacity:  ;
   --tw-backdrop-saturate:  ;
   --tw-backdrop-sepia:  ;
-  --tw-contain-size:  ;
-  --tw-contain-layout:  ;
-  --tw-contain-paint:  ;
-  --tw-contain-style:  ;
 }
 
 ::backdrop{
@@ -3670,10 +3822,6 @@ body {
   --tw-backdrop-opacity:  ;
   --tw-backdrop-saturate:  ;
   --tw-backdrop-sepia:  ;
-  --tw-contain-size:  ;
-  --tw-contain-layout:  ;
-  --tw-contain-paint:  ;
-  --tw-contain-style:  ;
 }
 
 .container{
@@ -3742,6 +3890,10 @@ body {
 
 .mb-4{
   margin-bottom: 1rem;
+}
+
+.mb-5{
+  margin-bottom: 1.25rem;
 }
 
 .mb-7{
@@ -3969,6 +4121,10 @@ body {
 
 .font-bold{
   font-weight: 700;
+}
+
+.font-medium{
+  font-weight: 500;
 }
 
 .font-normal{
@@ -4214,8 +4370,7 @@ p {
   color: var(--green);
 }
 
-@media (max-width: 768px)
-{
+@media (max-width: 768px) {
   h2 {
     font-size: 30px;
     line-height: 39px;

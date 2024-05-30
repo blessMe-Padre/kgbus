@@ -44,3 +44,19 @@ section+section {
 .section_group:not(:last-of-type):nth-of-type(even)::after {
     background-color: #ecf3f7;
 }
+
+@media (max-width: 768px) {
+    .section_group + .section_group {
+        padding-top: calc(var(--indent) + 40px);
+    }
+
+    section + section {
+        margin-top: 80px;
+    }
+}
+
+@media (max-width: 375px) {
+    section + section {
+        margin-top: 60px;
+    }
+}

@@ -1,5 +1,8 @@
 #gallery_box .gallery {
     --gap: 1.25rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
     gap: var(--gap);
 }
 
@@ -40,4 +43,25 @@
 
 #gallery_box a:hover > img {
     transform: scale(1.2);
+}
+
+@media (max-width: 768px) {
+    #gallery_box .photo,
+    #gallery_box .photo:nth-child(7n + 1),
+    #gallery_box .photo:nth-child(7n),
+    #gallery_box .photo:nth-child(7n + 2),
+    #gallery_box .photo:nth-child(7n + 6) {
+        width: calc((100% - (1 * var(--gap))) / 2);
+        height: 250px;
+    }
+}
+
+@media (max-width: 375px) {
+    #gallery_box .photo,
+    #gallery_box .photo:nth-child(7n + 1),
+    #gallery_box .photo:nth-child(7n),
+    #gallery_box .photo:nth-child(7n + 2),
+    #gallery_box .photo:nth-child(7n + 6) {
+        width: 100%;
+    }
 }

@@ -6,7 +6,7 @@ export const initAnimateClass = () => {
     const animate_class = 'animate';
     // Поиск списков
     const lists = document.querySelectorAll('ul.animate');
-console.log(document.querySelectorAll);
+
     // Перебор списков
     lists.forEach(function(ul, i) {
         // Получаем пункты списка

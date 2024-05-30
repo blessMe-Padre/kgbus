@@ -1266,8 +1266,14 @@ section {
   position: relative;
 }
 
-section + section {
+section+section {
   margin-top: 120px;
+}
+
+@media (max-width: 450px) {
+  section+section {
+    margin-top: 60px;
+  }
 }
 
 .section_group {
@@ -1279,7 +1285,7 @@ section + section {
   margin-bottom: calc(0px - var(--indent));
 }
 
-.section_group + .section_group {
+.section_group+.section_group {
   padding-top: calc(var(--indent) + 100px);
 }
 
@@ -3588,6 +3594,10 @@ section + section {
 }
 
 @media (max-width:590px) {
+  .rats {
+    margin-top: 50px;
+  }
+
   .rats__wrapper {
     grid-template-columns: 1fr;
     gap: 30px;

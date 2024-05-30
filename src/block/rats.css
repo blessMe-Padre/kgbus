@@ -41,6 +41,10 @@
 }
 
 @media (max-width:590px) {
+    .rats {
+        margin-top: 50px;
+    }
+
     .rats__wrapper {
         grid-template-columns: 1fr;
         gap: 30px;

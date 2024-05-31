@@ -53,6 +53,7 @@
 @import './block/spec-section.css';
 @import './block/news.css';
 @import './block/products.css';
+@import './block/404.css';
 
 
 /* Импорт TailWind */

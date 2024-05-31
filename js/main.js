@@ -16,6 +16,7 @@ import { runRoachedRun } from "./module/run-roached.js";
 import { initMask } from "./module/phone-mask.js";
 import { initItemsCount } from "./module/item-count.js";
 import { initIntersectionObservers } from "./module/intersection_observers.js";
+import { init404 } from "./module/404.js";
 
 
 window.addEventListener('DOMContentLoaded', () => {
@@ -31,6 +32,7 @@ window.addEventListener('DOMContentLoaded', () => {
     initMask();
     initSlider();
     initItemsCount();
+    init404();
     // initCurrentYear();
     // initScrollToTop();
     // initScroll();

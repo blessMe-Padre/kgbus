@@ -4068,6 +4068,30 @@ section+section {
   }
 }
 
+.products {
+}
+
+.products__list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.products__list li {
+  padding: 30px;
+  background-color: var(--light-gray);
+  border-radius: 20px;
+}
+
+.products__img {
+  padding: 20px;
+  background-color: var(--white);
+}
+
+.products__img img {
+  margin: 0 auto;
+}
+
 /* Импорт TailWind */
 
 /* ! tailwindcss v3.3.3 | MIT License | https://tailwindcss.com */

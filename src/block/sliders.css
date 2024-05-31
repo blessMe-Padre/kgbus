@@ -52,11 +52,18 @@
     background-color: var(--white);
     border-radius: 50%;
     padding: 11px;
+    transition-property: background-color;
+    transition-duration: calc(var(--duration-hover) * 1s);
 }
 
 .reverse .swiper-button-prev,
 .reverse .swiper-button-next {
     background-color: var(--gray);
+}
+
+.swiper-button-prev:hover,
+.swiper-button-next:hover {
+    background-color: var(--green);
 }
 
 .swiper-button-prev::after,
@@ -70,6 +77,13 @@
     mask-repeat: no-repeat;
     mask-position: center;
     mask-size: contain;
+    transition-property: background-color;
+    transition-duration: calc(var(--duration-hover) * 1s);
+}
+
+.swiper-button-prev:hover::after,
+.swiper-button-next:hover::after {
+    background-color: var(--white);
 }
 
 .reverse .swiper-button-prev::after,

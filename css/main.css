@@ -2530,6 +2530,11 @@ section+section {
   line-height: 1.3;
 }
 
+.main-title {
+  font-size: clamp(1.5rem, 1.179rem + 1.468vw, 2.5rem);
+  margin-bottom: clamp(1.25rem, 0.849rem + 1.835vw, 2.5rem);
+}
+
 .sub-title {
   font-weight: 600;
   font-size: 20px;
@@ -5259,6 +5264,12 @@ p {
 
 .image-wrapper img:hover {
   transform: scale(1.1);
+}
+
+.container-min {
+  max-width: 935px;
+  padding: 20px;
+  margin: 0 auto;
 }
 
 .hover\:text-blue:hover{

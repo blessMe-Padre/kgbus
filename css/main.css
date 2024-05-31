@@ -456,8 +456,7 @@
 }
 
 .swiper-centered.swiper-horizontal>.swiper-wrapper>.swiper-slide:first-child{
-  -webkit-margin-start:var(--swiper-centered-offset-before);
-          margin-inline-start:var(--swiper-centered-offset-before)
+  margin-inline-start:var(--swiper-centered-offset-before)
 }
 
 .swiper-centered.swiper-horizontal>.swiper-wrapper::before{
@@ -467,8 +466,7 @@
 }
 
 .swiper-centered.swiper-vertical>.swiper-wrapper>.swiper-slide:first-child{
-  -webkit-margin-before:var(--swiper-centered-offset-before);
-          margin-block-start:var(--swiper-centered-offset-before)
+  margin-block-start:var(--swiper-centered-offset-before)
 }
 
 .swiper-centered.swiper-vertical>.swiper-wrapper::before{
@@ -1000,11 +998,18 @@ button.swiper-pagination-bullet{
   background-color: var(--white);
   border-radius: 50%;
   padding: 11px;
+  transition-property: background-color;
+  transition-duration: calc(var(--duration-hover) * 1s);
 }
 
 .reverse .swiper-button-prev,
 .reverse .swiper-button-next {
   background-color: var(--gray);
+}
+
+.swiper-button-prev:hover,
+.swiper-button-next:hover {
+  background-color: var(--green);
 }
 
 .swiper-button-prev::after,
@@ -1022,6 +1027,13 @@ button.swiper-pagination-bullet{
           mask-position: center;
   -webkit-mask-size: contain;
           mask-size: contain;
+  transition-property: background-color;
+  transition-duration: calc(var(--duration-hover) * 1s);
+}
+
+.swiper-button-prev:hover::after,
+.swiper-button-next:hover::after {
+  background-color: var(--white);
 }
 
 .reverse .swiper-button-prev::after,
@@ -1597,12 +1609,55 @@ section+section {
   height: 439px;
 }
 
-#gallery_box a {
+.photo a {
+  position: relative;
   display: block;
   width: 100%;
   height: 100%;
   border-radius: 20px;
   overflow: hidden;
+}
+
+.photo a::before {
+  content: '';
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  background-color: #00000000;
+  transition-property: background-color;
+  transition-duration: calc(var(--duration-hover) * 1s);
+}
+
+.photo a::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 2;
+  display: none;
+  width: 50px;
+  height: 50px;
+  transform: translate(-50%, -50%);
+  background-color: var(--white);
+  -webkit-mask-image: url(../src/img/search.svg);
+          mask-image: url(../src/img/search.svg);
+  -webkit-mask-repeat: no-repeat;
+          mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+          mask-position: center;
+  -webkit-mask-size: contain;
+          mask-size: contain;
+}
+
+.photo a:hover::before {
+  background-color: #00000099;
+}
+
+.photo a:hover::after {
+  display: block;
 }
 
 #gallery_box a > img {
@@ -1753,14 +1808,14 @@ section+section {
 }
 
 #faq_box .question {
-  flex: 1;
-  /* margin-bottom: 20px; */
-  transition: all 0.3s ease;
+  background-color: #ecf3f7;
+  padding: 12.5px 15px 12.5px 30px;
+  border-radius: 10px;
 }
 
 #faq_box .question .title {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 1fr 40px;
   align-items: center;
   gap: 10px;
   width: 100%;
@@ -1768,53 +1823,63 @@ section+section {
   line-height: 24px;
   font-weight: 600;
   color: #292e35;
-  background-color: #ecf3f7;
-  padding: 12.5px 15px 12.5px 30px;
-  border-radius: 10px;
   margin-bottom: 0;
   cursor: pointer;
 }
 
-#faq_box .question .content {
-  max-height: 0;
-  opacity: 0;
-  overflow: hidden;
-  will-change: max-height;
-  transition: all 0.3s ease;
-  box-sizing: border-box;
-  padding-left: 20px;
-  padding-top: 10px;
-  padding-bottom: 10px;
-}
-
-#faq_box .question .title::after {
-  content: '+';
-  display: block;
+#faq_box .question .title .icon {
+  --line-width: 11px;
+  --line-height: 3px;
+  position: relative;
   width: 40px;
   height: 40px;
-  font-weight: 700;
-  text-align: center;
-  line-height: 40px;
-  color: #ffffff;
-  background-color: #b5c2d7;
+  background-color: var(--gray);
   border-radius: 50%;
-  flex: 0 0 auto;
 }
 
-#faq_box .question .title.is-active::after {
-  content: '-';
+#faq_box .question .title .icon::before,
+#faq_box .question .title .icon::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: block;
+  width: var(--line-height);
+  height: var(--line-width);
+  background-color: var(--white);
+  transform: translate(-50%, -50%);
+  transition-property: height;
+  transition-duration: calc(var(--duration-hover) * 1s);
+  transition-timing-function: ease-in;
+}
+
+#faq_box .question .title .icon::after {
+  width: var(--line-width);
+  height: var(--line-height);
+}
+
+#faq_box .question .title:hover .icon {
+  background-color: var(--green);
+}
+
+#faq_box .question .title.is-active .icon {
+  background-color: var(--blur-green);
+}
+
+#faq_box .question .title.is-active .icon::before {
+  height: 0px;
 }
 
 #faq_box .question .content {
-  opacity: 0;
-  visibility: hidden;
-  transition-property: height;
-  transition-duration: 1s;
+  display: none;
+  font-size: 18px;
+  line-height: 24px;
+  color: #a5b4cc;
+  margin: 20px 0px 20px;
 }
 
 #faq_box .question .content.is-active {
-  opacity: 1;
-  visibility: visible;
+  display: block;
 }
 
 #faq_box .image {
@@ -1825,10 +1890,10 @@ section+section {
 #faq_box .image img {
   max-width: none;
   width: 100%;
+  height: 320px;
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 20px;
-  max-height: 320px;
 }
 
 @media (max-width: 1023px) {
@@ -4094,7 +4159,7 @@ section+section {
 
 /* Импорт TailWind */
 
-/* ! tailwindcss v3.3.3 | MIT License | https://tailwindcss.com */
+/* ! tailwindcss v3.4.3 | MIT License | https://tailwindcss.com */
 
 /*
 1. Prevent padding and border from affecting element width. (https://github.com/mozdevs/cssremedy/issues/4)
@@ -4126,9 +4191,11 @@ section+section {
 4. Use the user's configured `sans` font-family by default.
 5. Use the user's configured `sans` font-feature-settings by default.
 6. Use the user's configured `sans` font-variation-settings by default.
+7. Disable tap highlights on iOS
 */
 
-html {
+html,
+:host {
   line-height: 1.5;
   /* 1 */
   -webkit-text-size-adjust: 100%;
@@ -4138,12 +4205,14 @@ html {
   -o-tab-size: 4;
      tab-size: 4;
   /* 3 */
-  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   /* 4 */
   font-feature-settings: normal;
   /* 5 */
   font-variation-settings: normal;
   /* 6 */
+  -webkit-tap-highlight-color: transparent;
+  /* 7 */
 }
 
 /*
@@ -4215,8 +4284,10 @@ strong {
 }
 
 /*
-1. Use the user's configured `mono` font family by default.
-2. Correct the odd `em` font sizing in all browsers.
+1. Use the user's configured `mono` font-family by default.
+2. Use the user's configured `mono` font-feature-settings by default.
+3. Use the user's configured `mono` font-variation-settings by default.
+4. Correct the odd `em` font sizing in all browsers.
 */
 
 code,
@@ -4225,8 +4296,12 @@ samp,
 pre {
   font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   /* 1 */
-  font-size: 1em;
+  font-feature-settings: normal;
   /* 2 */
+  font-variation-settings: normal;
+  /* 3 */
+  font-size: 1em;
+  /* 4 */
 }
 
 /*
@@ -4295,6 +4370,8 @@ textarea {
   /* 1 */
   line-height: inherit;
   /* 1 */
+  letter-spacing: inherit;
+  /* 1 */
   color: inherit;
   /* 1 */
   margin: 0;
@@ -4318,9 +4395,9 @@ select {
 */
 
 button,
-[type='button'],
-[type='reset'],
-[type='submit'] {
+input:where([type='button']),
+input:where([type='reset']),
+input:where([type='submit']) {
   -webkit-appearance: button;
   /* 1 */
   background-color: transparent;
@@ -4587,6 +4664,10 @@ body {
   --tw-backdrop-opacity:  ;
   --tw-backdrop-saturate:  ;
   --tw-backdrop-sepia:  ;
+  --tw-contain-size:  ;
+  --tw-contain-layout:  ;
+  --tw-contain-paint:  ;
+  --tw-contain-style:  ;
 }
 
 ::backdrop{
@@ -4637,6 +4718,10 @@ body {
   --tw-backdrop-opacity:  ;
   --tw-backdrop-saturate:  ;
   --tw-backdrop-sepia:  ;
+  --tw-contain-size:  ;
+  --tw-contain-layout:  ;
+  --tw-contain-paint:  ;
+  --tw-contain-style:  ;
 }
 
 .container{

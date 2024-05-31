@@ -5,7 +5,7 @@ import { initScrollToTop } from "./module/scroll-to-top.js";
 import { initScroll } from "./module/scroll.js";
 import { initAccordions } from "./module/accordions.js";
 import { initArrowClass } from "./module/arrow-class-menu.js";
-import { initAnimateClass } from "./module/add_class_for_animation.js";
+// import { initAnimateClass } from "./module/add_class_for_animation.js";
 import { initAppend } from "./module/appendElement.js";
 
 import { initBaguettes } from "./module/baguette_boxes.js";
@@ -15,6 +15,7 @@ import { initScrollAnimation } from "./module/scroll-animation.js";
 import { runRoachedRun } from "./module/run-roached.js";
 import { initMask } from "./module/phone-mask.js";
 import { initItemsCount } from "./module/item-count.js";
+import { initIntersectionObservers } from "./module/intersection_observers.js";
 
 
 window.addEventListener('DOMContentLoaded', () => {
@@ -35,8 +36,10 @@ window.addEventListener('DOMContentLoaded', () => {
     // initScroll();
     // baguetteBox.run('.gallery-wrapper');
 
-    initAnimateClass();
+    // initAnimateClass();
     initBaguettes();
+    initIntersectionObservers();
+
 
     // DOMContentLoaded..
 

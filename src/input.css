@@ -50,6 +50,9 @@
 @import './block/rats.css';
 @import './block/bacteria-services.css';
 @import './block/price-section.css';
+@import './block/spec-section.css';
+@import './block/news.css';
+@import './block/products.css';
 
 
 /* Импорт TailWind */
@@ -314,4 +317,10 @@ p {
 
 .image-wrapper img:hover {
     transform: scale(1.1);
+}
+
+.container-min {
+    max-width: 935px;
+    padding: 20px;
+    margin: 0 auto;
 }

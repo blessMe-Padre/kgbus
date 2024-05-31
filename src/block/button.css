@@ -18,6 +18,16 @@
     padding: 15px 40px;
 }
 
+.button--white {
+    color: var(--green);
+    background-color: var(--white);
+}
+
+/* .button--white:hover {
+    color: var(--green);
+    background-color: var(--white);
+} */
+
 @media (max-width:550px) {
     .button {
         font-size: 12px;

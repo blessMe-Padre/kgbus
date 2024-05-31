@@ -18,6 +18,10 @@
     padding: 15px 40px;
 }
 
+.button--large span {
+    font-size: 16px;
+}
+
 .button--white {
     color: var(--green);
     background-color: var(--white);

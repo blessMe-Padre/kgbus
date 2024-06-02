@@ -17,6 +17,7 @@ import { initMask } from "./module/phone-mask.js";
 import { initItemsCount } from "./module/item-count.js";
 import { initIntersectionObservers } from "./module/intersection_observers.js";
 import { init404 } from "./module/404.js";
+import { cookieConsentChecker } from './module/cookie-consent-checker.js';
 
 
 window.addEventListener('DOMContentLoaded', () => {
@@ -44,5 +45,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
 
     // DOMContentLoaded..
+
+    cookieConsentChecker();
 
 });

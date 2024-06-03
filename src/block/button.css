@@ -47,6 +47,12 @@ body {
     font-weight: 600;
 }
 
+.button-wrapper a.button-bg-white,
+.button-wrapper button.button-bg-white {
+    background-color: var(--white);
+    color: var(--green);
+}
+
 .button-wrapper a span,
 .button-wrapper button span {
     position: relative;

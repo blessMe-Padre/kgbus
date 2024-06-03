@@ -18,11 +18,13 @@ import { initItemsCount } from "./module/item-count.js";
 import { initIntersectionObservers } from "./module/intersection_observers.js";
 import { init404 } from "./module/404.js";
 import { cookieConsentChecker } from './module/cookie-consent-checker.js';
+import { initCityChooser } from "./module/city.js";
 
 
 window.addEventListener('DOMContentLoaded', () => {
     console.log('подключен скрипт main.js');
 
+    initCityChooser();
     initNav();
     initAccordions();
     initArrowClass();

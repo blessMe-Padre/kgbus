@@ -32,6 +32,10 @@
     background: #ecf3f7;
 }
 
+.main-form__form-wrapper .button {
+    margin: 20px 0;
+}
+
 .main-form__spray {
     position: absolute;
     left: 0;
@@ -81,7 +85,7 @@
 @media (max-width: 767px) {
 
     .main-form {
-        margin-top: 50px;
+        margin-top: 0;
     }
 
     .main-form__wrapper {

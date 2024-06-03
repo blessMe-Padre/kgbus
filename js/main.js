@@ -24,7 +24,12 @@ import { initCityChooser } from "./module/city.js";
 window.addEventListener('DOMContentLoaded', () => {
     console.log('подключен скрипт main.js');
 
-    initCityChooser();
+    // TODO: remove this when we have deployment
+    const select = document.querySelector('.city-select');
+    if (select) {
+        initCityChooser();
+    }
+
     initNav();
     initAccordions();
     initArrowClass();

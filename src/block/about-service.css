@@ -55,6 +55,10 @@
         padding: 20px;
     }
 
+    .about-service__description .list-disc {
+        font-size: 14px;
+    }
+
 }
 
 

@@ -20,6 +20,10 @@
     margin-left: 40px;
 }
 
+.service-hero__wrapper .form-wrapper .button {
+    margin: 20px 0;
+}
+
 .service-hero__wrapper .form-section__title {
     font-size: 24px;
     font-weight: 500;
@@ -89,7 +93,7 @@
     .service-hero__wrapper .form-wrapper .form {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        gap: 20px;
+        gap: 10px;
     }
 
     .service-hero__wrapper .form-section__title {
@@ -180,6 +184,10 @@
     .service-hero__img {
         left: 50px;
         z-index: 1;
+    }
+
+    .service-hero__wrapper .form-wrapper .button {
+        margin: 20px 0;
     }
 }
 

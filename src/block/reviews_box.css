@@ -62,4 +62,53 @@
         font-size: 14px;
         line-height: 18px;
     }
+
+    .reviews-link {
+        margin: 0;
+    }
+
+    .reviews .button-wrapper {
+        margin: 0;
+    }
+}
+
+.reviews-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.reviews-list .name {
+    font-family: "Involve", sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    color: #a5b4cc;
+}
+
+.reviews-list .grade {
+    font-family: "Involve", sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    color: #292e35;
+}
+
+.reviews-list .comment {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.3;
+    color: #292e35;
+    margin-bottom: 20px;
+}
+
+@media (max-width: 769px) {
+    .reviews-list {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 460px) {
+    .reviews-list {
+        grid-template-columns: 1fr;
+    }
 }

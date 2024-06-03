@@ -38,7 +38,6 @@
     border-radius: 20px;
 }
 
-
 .popup__text {
     font-size: 16px;
     font-weight: 400;
@@ -82,8 +81,7 @@
     padding: 10px 30px;
     background: #1a9640;
 
-    margin: 40px 0;
-
+    /* margin: 40px 0; */
 
     display: flex;
     justify-content: center;

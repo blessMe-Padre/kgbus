@@ -1,39 +1,85 @@
-.button {
+:root {
+    --height: 2.8em;
+    --width: 10em;
+    --button-color: #EE3769;
+}
+
+body {
+    background: #222;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-family: 'Noto Sans', sans-serif;
+}
+
+.button-wrapper {
+    position: relative;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    height: 45px;
+}
+
+.button-wrapper a,
+.button-wrapper button {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: auto;
+    text-decoration: none;
+    cursor: pointer;
+    border-radius: 8px;
+    height: var(--height);
+    padding: 0;
+    outline: none;
+    overflow: hidden;
+    color: var(--white);
+    transition: color 0.3s 0.1s ease-out;
+    text-align: center;
+    line-height: 250%;
+    background-color: var(--green);
+
     display: inline-flex;
     align-items: center;
-    gap: 15px;
+    gap: 10px;
+
+
     border-radius: 30px;
     padding: 9px 25px;
     font-weight: 600;
-    color: var(--white);
-    background-color: var(--green);
-    transition: color 0.3s ease, background-color 0.3s ease;
 }
 
-.button:hover {
-    background-color: var(--dark-green);
+.button-wrapper a span,
+.button-wrapper button span {
+    position: relative;
+    z-index: 1;
 }
 
-.button--large {
-    padding: 15px 40px;
+.button-wrapper a img,
+.button-wrapper button img {
+    position: relative;
+    z-index: 1;
 }
 
-.button--large span {
-    font-size: 16px;
+.button-wrapper a::before,
+.button-wrapper button::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    margin: auto;
+    content: '';
+    border-radius: 50%;
+    display: block;
+    width: calc(var(--width) * 2);
+    width: 100%;
+    height: calc(var(--width) * 2);
+    line-height: calc(var(--width) * 2);
+    text-align: center;
+    transition: box-shadow 0.5s ease-out;
+    box-sizing: border-box;
 }
 
-.button--white {
-    color: var(--green);
-    background-color: var(--white);
-}
-
-/* .button--white:hover {
-    color: var(--green);
-    background-color: var(--white);
-} */
-
-@media (max-width:550px) {
-    .button {
-        font-size: 12px;
-    }
+.button-wrapper a:hover::before,
+.button-wrapper button:hover::before {
+    /* box-shadow: inset 0 0 0 var(--width) rgba(238, 55, 105, 1); */
+    box-shadow: inset 0 0 0 var(--width) var(--dark-green);
 }

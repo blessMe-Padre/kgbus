@@ -17,57 +17,66 @@ export const initCityChooser = () => {
         'Уссурийск': { latitude: 43.8029, longitude: 131.9458 }
     };
 
-    if (navigator.geolocation) {
-        navigator.geolocation.getCurrentPosition(function (position) {
-            let userLocation = {
-                latitude: position.coords.latitude,
-                longitude: position.coords.longitude
-            };
 
-            let closestCity = 'Уссурийск';
-            let smallestDifference = Infinity;
+    // получаем из хранилища значение города
+    let savedCity = localStorage.getItem('closestCity');
+    if (!savedCity) {
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(function (position) {
+                let userLocation = {
+                    latitude: position.coords.latitude,
+                    longitude: position.coords.longitude
+                };
 
-            for (let city in citiesCoordinates) {
-                let cityLatitude = citiesCoordinates[city].latitude;
-                let difference = Math.abs(userLocation.latitude - cityLatitude);
+                let closestCity = null;
+                let smallestDifference = Infinity;
 
-                if (difference < smallestDifference) {
-                    smallestDifference = difference;
-                    closestCity = city;
+                for (let city in citiesCoordinates) {
+                    let cityLatitude = citiesCoordinates[city].latitude;
+                    let difference = Math.abs(userLocation.latitude - cityLatitude);
+
+                    if (difference < smallestDifference) {
+                        smallestDifference = difference;
+                        closestCity = city;
+                    }
                 }
-            }
-            // получаем из хранилища значение города
-            let savedCity = localStorage.getItem('closestCity');
-            if (!savedCity) {
-                cityPopup.classList.add('is-active');
-            }
+                if (closestCity) {
+                    console.log(`Ближайший город по широте: ${closestCity}`);
 
-            if (closestCity) {
-                console.log(`Ближайший город по широте: ${closestCity}`);
-
-                localStorage.setItem('closestCity', closestCity);
-                span.innerText = closestCity;
-            }
-
-            // Слушатель нажатия на кнопку yesBtn и закрытие попапа
-            yesBtn.addEventListener('click', (e) => {
-                e.preventDefault();
-                let currentCity = localStorage.getItem('closestCity');
-
-                if (currentCity == closestCity) {
-                    select.value = closestCity;
-                    window.location.href = 'http://127.0.0.1:5500/404.html';
+                    localStorage.setItem('closestCity', closestCity);
+                    span.innerText = closestCity;
                 }
 
-                cityPopup.classList.remove('is-active');
+                // получаем из хранилища значение города
+                let savedCity = localStorage.getItem('closestCity');
+                if (!savedCity) {
+                    cityPopup.classList.add('is-active');
+                }
+
+                // Слушатель нажатия на кнопку yesBtn и закрытие попапа
+                yesBtn.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    let currentCity = localStorage.getItem('closestCity');
+                    if (currentCity == closestCity) {
+                        select.value = closestCity;
+
+                        window.location.href = 'http://127.0.0.1:5500/404.html';
+                    }
+
+                    cityPopup.classList.remove('is-active');
+                });
+                // Слушатель нажатия на кнопку noBtn и закрытие попапа
+                noBtn.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    select.value = "Уссурийск";
+                    cityPopup.classList.remove('is-active');
+                });
+
             });
-            // Слушатель нажатия на кнопку noBtn и закрытие попапа
-            noBtn.addEventListener('click', (e) => {
-                e.preventDefault();
-                cityPopup.classList.remove('is-active');
-            });
-        });
+        }
     }
+
+    select.value = localStorage.getItem('closestCity');
 
     if (select) {
         select.addEventListener('change', (e) => {
@@ -88,8 +97,6 @@ export const initCityChooser = () => {
                 // window.location.href = VLADIVOSTOK_URL;
             }
         });
-
-
     }
 
     // export const

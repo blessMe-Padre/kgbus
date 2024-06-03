@@ -16,3 +16,39 @@
         gap: 5px;
     }
 }
+
+.city-popup {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 270px;
+    padding: 10px 20px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    ;
+    background-color: #fff;
+    display: none;
+}
+
+.city-popup.is-active {
+    display: block;
+}
+
+.city-popup span {
+    font-weight: 700;
+}
+
+.city-popup-btn {
+    padding: 5px 10px;
+    border-radius: 6px;
+    color: var(--white);
+    cursor: pointer;
+    box-sizing: border-box;
+}
+
+.city-popup-yes {
+    background-color: var(--green);
+}
+
+.city-popup-no {
+    background-color: red;
+}
